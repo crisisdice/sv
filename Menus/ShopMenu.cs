@@ -252,7 +252,7 @@ namespace StardewValley.Menus
       Random random = new Random((int) ((long) Game1.uniqueIDForThisGame + (long) Game1.stats.DaysPlayed));
       string text = Game1.content.LoadString("Strings\\StringsFromCSFiles:ShopMenu.cs.11457");
       // ISSUE: reference to a compiler-generated method
-      uint stringHash = \u003CPrivateImplementationDetails\u003E.ComputeStringHash(who);
+      uint stringHash = PrivateImplementationDetails.ComputeStringHash(who);
       if (stringHash <= 1771728057U)
       {
         if (stringHash <= 1305917497U)

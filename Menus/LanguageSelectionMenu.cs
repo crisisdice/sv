@@ -86,7 +86,7 @@ namespace StardewValley.Menus
           Game1.playSound("select");
           string name = language.name;
           // ISSUE: reference to a compiler-generated method
-          uint stringHash = \u003CPrivateImplementationDetails\u003E.ComputeStringHash(name);
+          uint stringHash = PrivateImplementationDetails.ComputeStringHash(name);
           if (stringHash <= 1197024134U)
           {
             if ((int) stringHash != 286263347)
@@ -185,7 +185,7 @@ label_24:
         int num = 0;
         string name = language.name;
         // ISSUE: reference to a compiler-generated method
-        uint stringHash = \u003CPrivateImplementationDetails\u003E.ComputeStringHash(name);
+        uint stringHash = PrivateImplementationDetails.ComputeStringHash(name);
         if (stringHash <= 1197024134U)
         {
           if ((int) stringHash != 286263347)

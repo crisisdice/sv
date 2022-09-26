@@ -74,7 +74,7 @@ namespace StardewValley.Menus
           {
             string option = options[index];
             // ISSUE: reference to a compiler-generated method
-            uint stringHash = \u003CPrivateImplementationDetails\u003E.ComputeStringHash(option);
+            uint stringHash = PrivateImplementationDetails.ComputeStringHash(option);
             if (stringHash <= 1611928003U)
             {
               if ((int) stringHash != 575982768)

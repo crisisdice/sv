@@ -73,7 +73,7 @@ namespace StardewValley.Quests
       {
         string monsterName = this.monsterName;
         // ISSUE: reference to a compiler-generated method
-        uint stringHash = \u003CPrivateImplementationDetails\u003E.ComputeStringHash(monsterName);
+        uint stringHash = PrivateImplementationDetails.ComputeStringHash(monsterName);
         if (stringHash <= 703662834U)
         {
           if (stringHash <= 503018864U)

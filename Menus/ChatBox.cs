@@ -55,7 +55,7 @@ namespace StardewValley.Menus
             {
               string s = message.Split(' ')[0].Substring(1);
               // ISSUE: reference to a compiler-generated method
-              uint stringHash = \u003CPrivateImplementationDetails\u003E.ComputeStringHash(s);
+              uint stringHash = PrivateImplementationDetails.ComputeStringHash(s);
               if (stringHash <= 1013213428U)
               {
                 if ((int) stringHash != 355814093)

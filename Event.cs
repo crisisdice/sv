@@ -176,7 +176,7 @@ namespace StardewValley
       {
         string s = split[1];
         // ISSUE: reference to a compiler-generated method
-        uint stringHash = \u003CPrivateImplementationDetails\u003E.ComputeStringHash(s);
+        uint stringHash = PrivateImplementationDetails.ComputeStringHash(s);
         if (stringHash <= 1997527009U)
         {
           if (stringHash <= 1353598700U)
@@ -1346,7 +1346,7 @@ namespace StardewValley
           {
             string lower = split[1].ToLower();
             // ISSUE: reference to a compiler-generated method
-            uint stringHash = \u003CPrivateImplementationDetails\u003E.ComputeStringHash(lower);
+            uint stringHash = PrivateImplementationDetails.ComputeStringHash(lower);
             if (stringHash <= 890111454U)
             {
               if ((int) stringHash != 456875097)
@@ -1509,7 +1509,7 @@ namespace StardewValley
           {
             string s = split[1];
             // ISSUE: reference to a compiler-generated method
-            uint stringHash = \u003CPrivateImplementationDetails\u003E.ComputeStringHash(s);
+            uint stringHash = PrivateImplementationDetails.ComputeStringHash(s);
             if (stringHash <= 679977874U)
             {
               if (stringHash <= 306545799U)
@@ -2715,7 +2715,7 @@ label_652:
     private void addSpecificTemporarySprite(string key, GameLocation location, string[] split)
     {
       // ISSUE: reference to a compiler-generated method
-      uint stringHash = \u003CPrivateImplementationDetails\u003E.ComputeStringHash(key);
+      uint stringHash = PrivateImplementationDetails.ComputeStringHash(key);
       if (stringHash <= 2358341695U)
       {
         if (stringHash <= 1042337593U)
@@ -6202,7 +6202,7 @@ label_652:
         farmer.CanMove = true;
       Game1.viewportFreeze = false;
       // ISSUE: reference to a compiler-generated method
-      uint stringHash = \u003CPrivateImplementationDetails\u003E.ComputeStringHash(id);
+      uint stringHash = PrivateImplementationDetails.ComputeStringHash(id);
       if (stringHash <= 1073062698U)
       {
         if (stringHash <= 750634491U)
@@ -6587,7 +6587,7 @@ label_652:
           who.hasPartnerForDance = true;
           string spouse = Game1.player.spouse;
           // ISSUE: reference to a compiler-generated method
-          uint stringHash = \u003CPrivateImplementationDetails\u003E.ComputeStringHash(spouse);
+          uint stringHash = PrivateImplementationDetails.ComputeStringHash(spouse);
           if (stringHash <= 1708213605U)
           {
             if (stringHash <= 587846041U)
@@ -7049,7 +7049,7 @@ label_41:
                   int int32_3 = Convert.ToInt32(strArray[index + 3]);
                   Item key = (Item) null;
                   // ISSUE: reference to a compiler-generated method
-                  uint stringHash = \u003CPrivateImplementationDetails\u003E.ComputeStringHash(s);
+                  uint stringHash = PrivateImplementationDetails.ComputeStringHash(s);
                   if (stringHash <= 2707948032U)
                   {
                     if (stringHash <= 1430892386U)
@@ -7401,7 +7401,7 @@ label_100:
       else
       {
         // ISSUE: reference to a compiler-generated method
-        uint stringHash = \u003CPrivateImplementationDetails\u003E.ComputeStringHash(questionKey);
+        uint stringHash = PrivateImplementationDetails.ComputeStringHash(questionKey);
         if (stringHash <= 1836559258U)
         {
           if (stringHash <= 390240131U)

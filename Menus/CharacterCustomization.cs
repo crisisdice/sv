@@ -699,7 +699,7 @@ namespace StardewValley.Menus
     private void optionButtonClick(string name)
     {
       // ISSUE: reference to a compiler-generated method
-      uint stringHash = \u003CPrivateImplementationDetails\u003E.ComputeStringHash(name);
+      uint stringHash = PrivateImplementationDetails.ComputeStringHash(name);
       if (stringHash <= 1367651536U)
       {
         if (stringHash <= 989237149U)

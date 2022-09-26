@@ -753,7 +753,7 @@ namespace StardewValley.Locations
       int num = -1;
       string name = npc.name;
       // ISSUE: reference to a compiler-generated method
-      uint stringHash = \u003CPrivateImplementationDetails\u003E.ComputeStringHash(name);
+      uint stringHash = PrivateImplementationDetails.ComputeStringHash(name);
       if (stringHash <= 1866496948U)
       {
         if (stringHash <= 1067922812U)

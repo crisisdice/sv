@@ -446,7 +446,7 @@ namespace StardewValley
     protected override string translateName(string name)
     {
       // ISSUE: reference to a compiler-generated method
-      uint stringHash = \u003CPrivateImplementationDetails\u003E.ComputeStringHash(name);
+      uint stringHash = PrivateImplementationDetails.ComputeStringHash(name);
       if (stringHash <= 2721151973U)
       {
         if (stringHash <= 2668186459U)
@@ -1073,7 +1073,7 @@ namespace StardewValley
             bool flag = true;
             string name = this.name;
             // ISSUE: reference to a compiler-generated method
-            uint stringHash = \u003CPrivateImplementationDetails\u003E.ComputeStringHash(name);
+            uint stringHash = PrivateImplementationDetails.ComputeStringHash(name);
             if (stringHash <= 1708213605U)
             {
               if (stringHash <= 587846041U)
@@ -3091,7 +3091,7 @@ namespace StardewValley
       this.setNewDialogue("MarriageDialogue", "patio_", -1, false, true);
       string name = this.name;
       // ISSUE: reference to a compiler-generated method
-      uint stringHash = \u003CPrivateImplementationDetails\u003E.ComputeStringHash(name);
+      uint stringHash = PrivateImplementationDetails.ComputeStringHash(name);
       if (stringHash <= 1866496948U)
       {
         if (stringHash <= 1067922812U)

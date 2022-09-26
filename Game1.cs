@@ -1391,7 +1391,7 @@ namespace StardewValley
     public static void setRichPresence(string friendlyName, object argument = null)
     {
       // ISSUE: reference to a compiler-generated method
-      uint stringHash = \u003CPrivateImplementationDetails\u003E.ComputeStringHash(friendlyName);
+      uint stringHash = PrivateImplementationDetails.ComputeStringHash(friendlyName);
       if (stringHash <= 2353551851U)
       {
         if (stringHash <= 819128320U)
@@ -7065,7 +7065,7 @@ label_81:
         {
           string s = strArray[0];
           // ISSUE: reference to a compiler-generated method
-          uint stringHash = \u003CPrivateImplementationDetails\u003E.ComputeStringHash(s);
+          uint stringHash = PrivateImplementationDetails.ComputeStringHash(s);
           if (stringHash <= 2072037248U)
           {
             if (stringHash <= 1147755170U)
@@ -12097,7 +12097,7 @@ label_127:
         NPC npc = objectDialogueWithPortrait ? Game1.objectDialoguePortraitPerson : Game1.currentSpeaker;
         string s = objectDialogueWithPortrait ? (Game1.objectDialoguePortraitPerson.name.Equals(Game1.player.spouse) ? "$l" : "$neutral") : npc.CurrentDialogue.Peek().CurrentEmotion;
         // ISSUE: reference to a compiler-generated method
-        uint stringHash = \u003CPrivateImplementationDetails\u003E.ComputeStringHash(s);
+        uint stringHash = PrivateImplementationDetails.ComputeStringHash(s);
         if (stringHash <= 1488727062U)
         {
           if ((int) stringHash != 1186729920)
@@ -13083,7 +13083,7 @@ label_35:
     public static Color getColorForTreasureType(string type)
     {
       // ISSUE: reference to a compiler-generated method
-      uint stringHash = \u003CPrivateImplementationDetails\u003E.ComputeStringHash(type);
+      uint stringHash = PrivateImplementationDetails.ComputeStringHash(type);
       if (stringHash <= 872197005U)
       {
         if ((int) stringHash != 116937720)

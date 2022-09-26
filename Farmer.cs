@@ -2940,7 +2940,7 @@ namespace StardewValley
       {
         string s = ((IEnumerable<string>) who.itemToEat.Name.Split(' ')).Last<string>();
         // ISSUE: reference to a compiler-generated method
-        uint stringHash = \u003CPrivateImplementationDetails\u003E.ComputeStringHash(s);
+        uint stringHash = PrivateImplementationDetails.ComputeStringHash(s);
         if (stringHash <= 2470525844U)
         {
           if (stringHash <= 948615682U)

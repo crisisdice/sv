@@ -295,7 +295,7 @@ namespace StardewValley.Menus
     {
       int num = -1;
       // ISSUE: reference to a compiler-generated method
-      uint stringHash = \u003CPrivateImplementationDetails\u003E.ComputeStringHash(name);
+      uint stringHash = PrivateImplementationDetails.ComputeStringHash(name);
       if (stringHash <= 3454868101U)
       {
         if (stringHash <= 3001865938U)
@@ -431,7 +431,7 @@ namespace StardewValley.Menus
             int num = 0;
             string name = tab.name;
             // ISSUE: reference to a compiler-generated method
-            uint stringHash = \u003CPrivateImplementationDetails\u003E.ComputeStringHash(name);
+            uint stringHash = PrivateImplementationDetails.ComputeStringHash(name);
             if (stringHash <= 3048072735U)
             {
               if (stringHash <= 2237694710U)

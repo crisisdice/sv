@@ -334,7 +334,7 @@ namespace StardewValley.Menus
       string str = Game1.player.currentLocation.Name;
       string name1 = Game1.player.currentLocation.Name;
       // ISSUE: reference to a compiler-generated method
-      uint stringHash1 = \u003CPrivateImplementationDetails\u003E.ComputeStringHash(name1);
+      uint stringHash1 = PrivateImplementationDetails.ComputeStringHash(name1);
       if (stringHash1 <= 2026102357U)
       {
         if (stringHash1 <= 1078463463U)
@@ -605,7 +605,7 @@ label_79:
       int tileY = Game1.player.getTileY();
       string name2 = Game1.player.currentLocation.name;
       // ISSUE: reference to a compiler-generated method
-      uint stringHash2 = \u003CPrivateImplementationDetails\u003E.ComputeStringHash(name2);
+      uint stringHash2 = PrivateImplementationDetails.ComputeStringHash(name2);
       if (stringHash2 <= 2151182681U)
       {
         if (stringHash2 <= 1078463463U)

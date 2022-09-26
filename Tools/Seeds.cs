@@ -70,7 +70,7 @@ namespace StardewValley.Tools
     {
       string seedType = this.seedType;
       // ISSUE: reference to a compiler-generated method
-      uint stringHash = \u003CPrivateImplementationDetails\u003E.ComputeStringHash(seedType);
+      uint stringHash = PrivateImplementationDetails.ComputeStringHash(seedType);
       if (stringHash <= 2309904358U)
       {
         if (stringHash <= 1020152658U)

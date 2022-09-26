@@ -659,7 +659,7 @@ namespace StardewValley.Objects
     {
       string lower = typeName.ToLower();
       // ISSUE: reference to a compiler-generated method
-      uint stringHash = \u003CPrivateImplementationDetails\u003E.ComputeStringHash(lower);
+      uint stringHash = PrivateImplementationDetails.ComputeStringHash(lower);
       if (stringHash <= 1555340682U)
       {
         if (stringHash <= 732630053U)

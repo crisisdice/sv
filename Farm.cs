@@ -1018,7 +1018,7 @@ namespace StardewValley
       this.removeTile(72, 6, "AlwaysFront");
       this.removeTile(69, 6, "AlwaysFront");
       // ISSUE: reference to a compiler-generated method
-      uint stringHash = \u003CPrivateImplementationDetails\u003E.ComputeStringHash(spouseName);
+      uint stringHash = PrivateImplementationDetails.ComputeStringHash(spouseName);
       if (stringHash <= 1866496948U)
       {
         if (stringHash <= 1067922812U)

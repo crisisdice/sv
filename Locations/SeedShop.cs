@@ -103,7 +103,7 @@ namespace StardewValley.Locations
         str1 = Game1.content.LoadString("Data\\ExtraDialogue:PurchasedItem_Teen", (object) str3, (object) str4, (object) i.DisplayName);
       string name = n.name;
       // ISSUE: reference to a compiler-generated method
-      uint stringHash = \u003CPrivateImplementationDetails\u003E.ComputeStringHash(name);
+      uint stringHash = PrivateImplementationDetails.ComputeStringHash(name);
       if (stringHash <= 1708213605U)
       {
         if ((int) stringHash != 208794864)

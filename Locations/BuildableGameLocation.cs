@@ -338,7 +338,7 @@ namespace StardewValley.Locations
       }
       string name = structureForPlacement.name;
       // ISSUE: reference to a compiler-generated method
-      uint stringHash = \u003CPrivateImplementationDetails\u003E.ComputeStringHash(name);
+      uint stringHash = PrivateImplementationDetails.ComputeStringHash(name);
       Building building;
       if (stringHash <= 1972213674U)
       {

@@ -494,7 +494,7 @@ namespace StardewValley.Menus
     public static string getAnimalTitle(string name)
     {
       // ISSUE: reference to a compiler-generated method
-      uint stringHash = \u003CPrivateImplementationDetails\u003E.ComputeStringHash(name);
+      uint stringHash = PrivateImplementationDetails.ComputeStringHash(name);
       if (stringHash <= 889009852U)
       {
         if ((int) stringHash != 292886277)
@@ -533,7 +533,7 @@ namespace StardewValley.Menus
     public static string getAnimalDescription(string name)
     {
       // ISSUE: reference to a compiler-generated method
-      uint stringHash = \u003CPrivateImplementationDetails\u003E.ComputeStringHash(name);
+      uint stringHash = PrivateImplementationDetails.ComputeStringHash(name);
       if (stringHash <= 889009852U)
       {
         if ((int) stringHash != 292886277)

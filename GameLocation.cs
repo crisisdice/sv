@@ -1182,7 +1182,7 @@ label_83:
       {
         string s = fullActionString.Split(' ')[0];
         // ISSUE: reference to a compiler-generated method
-        uint stringHash = \u003CPrivateImplementationDetails\u003E.ComputeStringHash(s);
+        uint stringHash = PrivateImplementationDetails.ComputeStringHash(s);
         if (stringHash <= 1817135690U)
         {
           if (stringHash <= 799419560U)
@@ -2648,7 +2648,7 @@ label_10:
       }
       string name = this.name;
       // ISSUE: reference to a compiler-generated method
-      uint stringHash = \u003CPrivateImplementationDetails\u003E.ComputeStringHash(name);
+      uint stringHash = PrivateImplementationDetails.ComputeStringHash(name);
       if (stringHash <= 1840909614U)
       {
         if (stringHash <= 807500499U)
@@ -3798,7 +3798,7 @@ label_10:
         string[] strArray = action.Split(' ');
         string s = strArray[0];
         // ISSUE: reference to a compiler-generated method
-        uint stringHash = \u003CPrivateImplementationDetails\u003E.ComputeStringHash(s);
+        uint stringHash = PrivateImplementationDetails.ComputeStringHash(s);
         if (stringHash <= 2413466880U)
         {
           if (stringHash <= 1135412759U)
@@ -6034,7 +6034,7 @@ label_369:
       if (questionAndAnswer.Equals("Mine_Return to level " + (object) Game1.player.deepestMineLevel))
         Game1.mine.enterMine(Game1.player, Game1.player.deepestMineLevel, false);
       // ISSUE: reference to a compiler-generated method
-      uint stringHash = \u003CPrivateImplementationDetails\u003E.ComputeStringHash(questionAndAnswer);
+      uint stringHash = PrivateImplementationDetails.ComputeStringHash(questionAndAnswer);
       if (stringHash <= 1823658541U)
       {
         if (stringHash <= 799649041U)
@@ -7336,7 +7336,7 @@ label_295:
       List<Vector2> locations = new List<Vector2>();
       string name = o.Name;
       // ISSUE: reference to a compiler-generated method
-      uint stringHash = \u003CPrivateImplementationDetails\u003E.ComputeStringHash(name);
+      uint stringHash = PrivateImplementationDetails.ComputeStringHash(name);
       if (stringHash <= 3002255887U)
       {
         if (stringHash <= 1478161722U)
@@ -7999,7 +7999,7 @@ label_19:
           return strArray[0];
         string s = strArray[0];
         // ISSUE: reference to a compiler-generated method
-        uint stringHash = \u003CPrivateImplementationDetails\u003E.ComputeStringHash(s);
+        uint stringHash = PrivateImplementationDetails.ComputeStringHash(s);
         if (stringHash <= 1821685427U)
         {
           if (stringHash <= 849800425U)

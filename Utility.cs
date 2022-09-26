@@ -862,7 +862,7 @@ namespace StardewValley
     public static string getLoveInterest(string who)
     {
       // ISSUE: reference to a compiler-generated method
-      uint stringHash = \u003CPrivateImplementationDetails\u003E.ComputeStringHash(who);
+      uint stringHash = PrivateImplementationDetails.ComputeStringHash(who);
       if (stringHash <= 1866496948U)
       {
         if (stringHash <= 1067922812U)
@@ -1714,7 +1714,7 @@ namespace StardewValley
     public static bool isMale(string who)
     {
       // ISSUE: reference to a compiler-generated method
-      uint stringHash = \u003CPrivateImplementationDetails\u003E.ComputeStringHash(who);
+      uint stringHash = PrivateImplementationDetails.ComputeStringHash(who);
       if (stringHash <= 2434294092U)
       {
         if ((int) stringHash != 587846041)
@@ -3202,7 +3202,7 @@ label_14:
       int int32_2 = Convert.ToInt32(strArray[index3]);
       Item obj = (Item) null;
       // ISSUE: reference to a compiler-generated method
-      uint stringHash = \u003CPrivateImplementationDetails\u003E.ComputeStringHash(s);
+      uint stringHash = PrivateImplementationDetails.ComputeStringHash(s);
       if (stringHash <= 3082879841U)
       {
         if (stringHash <= 1430892386U)
@@ -3400,7 +3400,7 @@ label_46:
     {
       string lower = cueName.ToLower();
       // ISSUE: reference to a compiler-generated method
-      uint stringHash = \u003CPrivateImplementationDetails\u003E.ComputeStringHash(lower);
+      uint stringHash = PrivateImplementationDetails.ComputeStringHash(lower);
       if (stringHash <= 2381310912U)
       {
         if (stringHash <= 1014963253U)
@@ -6191,7 +6191,7 @@ label_14:
       Color color8 = Color.White;
       Color color9 = Color.White;
       // ISSUE: reference to a compiler-generated method
-      uint stringHash = \u003CPrivateImplementationDetails\u003E.ComputeStringHash(theme);
+      uint stringHash = PrivateImplementationDetails.ComputeStringHash(theme);
       if (stringHash <= 2465108186U)
       {
         if (stringHash <= 1139731784U)

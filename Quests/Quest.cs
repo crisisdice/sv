@@ -140,7 +140,7 @@ namespace StardewValley.Quests
       Quest quest = (Quest) null;
       string[] strArray2 = strArray1[4].Split(' ');
       // ISSUE: reference to a compiler-generated method
-      uint stringHash = \u003CPrivateImplementationDetails\u003E.ComputeStringHash(s);
+      uint stringHash = PrivateImplementationDetails.ComputeStringHash(s);
       if (stringHash <= 1539345862U)
       {
         if (stringHash <= 133275711U)
