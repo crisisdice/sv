@@ -984,11 +984,12 @@ namespace StardewValley
       Game1.game1 = this;
       Program.sdk.EarlyInitialize();
       Game1.graphics = new GraphicsDeviceManager((Game) this);
+      Game1.graphics.GraphicsProfile = Microsoft.Xna.Framework.Graphics.GraphicsProfile.HiDef;
       Game1.graphics.PreferredBackBufferWidth = 1280;
       Game1.graphics.PreferredBackBufferHeight = 720;
       Game1.viewport = new xTile.Dimensions.Rectangle(new Size(1280, 720));
       this.Window.AllowUserResizing = true;
-      this.Content.RootDirectory = "Content";
+      this.Content.RootDirectory = "C:\\Program Files (x86)\\Steam\\STEAM\\steamapps\\common\\Stardew Valley\\Content";
       Game1._temporaryContent = this.CreateContentManager(this.Content.ServiceProvider, this.Content.RootDirectory);
       this.Window.ClientSizeChanged += new EventHandler<EventArgs>(this.Window_ClientSizeChanged);
       this.Exiting += new EventHandler<EventArgs>(this.exitEvent);
@@ -1153,7 +1154,7 @@ namespace StardewValley
       string str = this.Content.RootDirectory;
       if (!File.Exists(Path.Combine(str, "XACT", "FarmerSounds.xgs")))
       {
-        str = "C:\\Program Files (x86)\\Steam\\SteamApps\\common\\Stardew Valley\\Content";
+        str = "C:\\Program Files (x86)\\Steam\\STEAM\\steamapps\\common\\Stardew Valley\\Content";
         if (!Directory.Exists(str))
           str = "C:\\Program Files\\Steam\\SteamApps\\common\\Stardew Valley\\Content";
       }
