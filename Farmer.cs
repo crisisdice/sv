@@ -3101,6 +3101,7 @@ label_23:
               temporaryAnimatedSprite = new TemporaryAnimatedSprite(Game1.objectSpriteSheet, Game1.getSourceRectForStandardTileSheet(Game1.objectSpriteSheet, @object.parentSheetIndex, 16, 16), 200f, 1, 0, who.position + new Vector2(0.0f, (float) (-Game1.tileSize * 2 + 8)), false, false, (float) ((double) who.getStandingY() / 10000.0 - 1.0 / 1000.0), 0.02f, Color.White, (float) Game1.pixelZoom, -0.02f, 0.0f, 0.0f, false);
               break;
           }
+          break;
         case 1:
           switch (who.FarmerSprite.indexInCurrentAnimation)
           {
@@ -3120,6 +3121,7 @@ label_23:
               temporaryAnimatedSprite = new TemporaryAnimatedSprite(Game1.objectSpriteSheet, Game1.getSourceRectForStandardTileSheet(Game1.objectSpriteSheet, @object.parentSheetIndex, 16, 16), 200f, 1, 0, who.position + new Vector2(0.0f, (float) (-Game1.tileSize * 2 + 4)), false, false, (float) ((double) who.getStandingY() / 10000.0 + 0.00999999977648258), 0.02f, Color.White, (float) Game1.pixelZoom, -0.02f, 0.0f, 0.0f, false);
               break;
           }
+          break;
         case 2:
           switch (who.FarmerSprite.indexInCurrentAnimation)
           {
@@ -3139,6 +3141,7 @@ label_23:
               temporaryAnimatedSprite = new TemporaryAnimatedSprite(Game1.objectSpriteSheet, Game1.getSourceRectForStandardTileSheet(Game1.objectSpriteSheet, @object.parentSheetIndex, 16, 16), 200f, 1, 0, who.position + new Vector2(0.0f, (float) (-Game1.tileSize * 2 + 8)), false, false, (float) ((double) who.getStandingY() / 10000.0 + 0.00999999977648258), 0.02f, Color.White, (float) Game1.pixelZoom, -0.02f, 0.0f, 0.0f, false);
               break;
           }
+          break;
         case 3:
           switch (who.FarmerSprite.indexInCurrentAnimation)
           {
@@ -3158,6 +3161,7 @@ label_23:
               temporaryAnimatedSprite = new TemporaryAnimatedSprite(Game1.objectSpriteSheet, Game1.getSourceRectForStandardTileSheet(Game1.objectSpriteSheet, @object.parentSheetIndex, 16, 16), 200f, 1, 0, who.position + new Vector2(0.0f, (float) (-Game1.tileSize * 2 + 4)), false, false, (float) ((double) who.getStandingY() / 10000.0 + 0.00999999977648258), 0.02f, Color.White, (float) Game1.pixelZoom, -0.02f, 0.0f, 0.0f, false);
               break;
           }
+          break;
       }
       if ((@object.Equals((object) who.ActiveObject) || who.ActiveObject != null && @object != null && @object.ParentSheetIndex == who.ActiveObject.parentSheetIndex) && who.FarmerSprite.indexInCurrentAnimation == 5)
         temporaryAnimatedSprite = (TemporaryAnimatedSprite) null;
@@ -3205,6 +3209,7 @@ label_23:
               };
               break;
           }
+          break;
         case 1:
           switch (who.FarmerSprite.indexInCurrentAnimation)
           {
@@ -3229,6 +3234,7 @@ label_23:
               };
               break;
           }
+          break;
         case 2:
           switch (who.FarmerSprite.indexInCurrentAnimation)
           {
@@ -3254,6 +3260,7 @@ label_23:
               };
               break;
           }
+          break;
         case 3:
           switch (who.FarmerSprite.indexInCurrentAnimation)
           {
@@ -3280,6 +3287,7 @@ label_23:
               temporaryAnimatedSprite1 = temporaryAnimatedSprite2;
               break;
           }
+          break;
       }
       if (temporaryAnimatedSprite1 == null)
         return;

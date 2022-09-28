@@ -201,15 +201,11 @@ namespace StardewValley
         int num9 = 0;
         double num10 = 1.0;
         spriteBatch2.Draw(mouseCursors, local2, sourceRectangle2, color, (float) num5, origin, (float) num8, (SpriteEffects) num9, (float) num10);
-        // ISSUE: explicit reference operation
-        // ISSUE: variable of a reference type
-        Rectangle& local3 = @sourceRectForObject;
         int num11 = 276;
         totalGameTime = Game1.currentGameTime.TotalGameTime;
         int num12 = (int) ((totalGameTime.TotalMilliseconds + (double) (x * 3204) + (double) (y * 49)) % 700.0 / 100.0) * 8;
         int num13 = num11 + num12;
-        // ISSUE: explicit reference operation
-        (^local3).X = num13;
+        (sourceRectForObject).X = num13;
         sourceRectForObject.Y = 1965;
         sourceRectForObject.Width = 8;
         sourceRectForObject.Height = 8;

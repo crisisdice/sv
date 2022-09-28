@@ -244,9 +244,6 @@ namespace StardewValley
     {
       for (int index = 0; index < inputButton.Length; ++index)
       {
-        // ISSUE: explicit reference operation
-        // ISSUE: variable of a reference type
-        InputButton& local = @inputButton[index];
         if (inputButton[index].key != Microsoft.Xna.Framework.Input.Keys.None)
           return inputButton[index].key;
       }

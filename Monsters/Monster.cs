@@ -601,33 +601,23 @@ namespace StardewValley.Monsters
           TimeSpan elapsedGameTime;
           if (flag1 && !flag2 && !currentLocation.isCollidingPosition(this.nextPosition(1), viewport, false, this.damageToFarmer, this.isGlider, (Character) this))
           {
-            // ISSUE: explicit reference operation
-            // ISSUE: variable of a reference type
-            float& local = @this.position.X;
-            // ISSUE: explicit reference operation
-            double num1 = (double) ^local;
+            double num1 = (double) this.position.X;
             double speed = (double) this.speed;
             elapsedGameTime = time.ElapsedGameTime;
             double num2 = (double) elapsedGameTime.Milliseconds / 64.0;
             double num3 = speed * num2;
             double num4 = num1 + num3;
-            // ISSUE: explicit reference operation
-            ^local = (float) num4;
+            this.position.X = (float) num4;
           }
           else if (flag2 && !flag1 && !currentLocation.isCollidingPosition(this.nextPosition(3), viewport, false, this.damageToFarmer, this.isGlider, (Character) this))
           {
-            // ISSUE: explicit reference operation
-            // ISSUE: variable of a reference type
-            float& local = @this.position.X;
-            // ISSUE: explicit reference operation
-            double num1 = (double) ^local;
+            double num1 = (double) this.position.X;
             double speed = (double) this.speed;
             elapsedGameTime = time.ElapsedGameTime;
             double num2 = (double) elapsedGameTime.Milliseconds / 64.0;
             double num3 = speed * num2;
             double num4 = num1 - num3;
-            // ISSUE: explicit reference operation
-            ^local = (float) num4;
+            this.position.X = (float) num4;
           }
           if (!currentLocation.isTilePassable(this.nextPosition(0), viewport) || !this.willDestroyObjectsUnderfoot)
             this.Halt();
@@ -671,33 +661,23 @@ namespace StardewValley.Monsters
           TimeSpan elapsedGameTime;
           if (flag1 && !flag2 && !currentLocation.isCollidingPosition(this.nextPosition(2), viewport, false, this.damageToFarmer, this.isGlider, (Character) this))
           {
-            // ISSUE: explicit reference operation
-            // ISSUE: variable of a reference type
-            float& local = @this.position.Y;
-            // ISSUE: explicit reference operation
-            double num1 = (double) ^local;
+            double num1 = (double) this.position.Y;
             double speed = (double) this.speed;
             elapsedGameTime = time.ElapsedGameTime;
             double num2 = (double) elapsedGameTime.Milliseconds / 64.0;
             double num3 = speed * num2;
             double num4 = num1 + num3;
-            // ISSUE: explicit reference operation
-            ^local = (float) num4;
+            this.position.Y = (float) num4;
           }
           else if (flag2 && !flag1 && !currentLocation.isCollidingPosition(this.nextPosition(0), viewport, false, this.damageToFarmer, this.isGlider, (Character) this))
           {
-            // ISSUE: explicit reference operation
-            // ISSUE: variable of a reference type
-            float& local = @this.position.Y;
-            // ISSUE: explicit reference operation
-            double num1 = (double) ^local;
+            double num1 = (double) this.position.Y;
             double speed = (double) this.speed;
             elapsedGameTime = time.ElapsedGameTime;
             double num2 = (double) elapsedGameTime.Milliseconds / 64.0;
             double num3 = speed * num2;
             double num4 = num1 - num3;
-            // ISSUE: explicit reference operation
-            ^local = (float) num4;
+            this.position.Y = (float) num4;
           }
           if (!currentLocation.isTilePassable(this.nextPosition(1), viewport) || !this.willDestroyObjectsUnderfoot)
             this.Halt();
@@ -741,33 +721,23 @@ namespace StardewValley.Monsters
           TimeSpan elapsedGameTime;
           if (flag1 && !flag2 && !currentLocation.isCollidingPosition(this.nextPosition(1), viewport, false, this.damageToFarmer, this.isGlider, (Character) this))
           {
-            // ISSUE: explicit reference operation
-            // ISSUE: variable of a reference type
-            float& local = @this.position.X;
-            // ISSUE: explicit reference operation
-            double num1 = (double) ^local;
+            double num1 = (double) this.position.X;
             double speed = (double) this.speed;
             elapsedGameTime = time.ElapsedGameTime;
             double num2 = (double) elapsedGameTime.Milliseconds / 64.0;
             double num3 = speed * num2;
             double num4 = num1 + num3;
-            // ISSUE: explicit reference operation
-            ^local = (float) num4;
+            this.position.X = (float) num4;
           }
           else if (flag2 && !flag1 && !currentLocation.isCollidingPosition(this.nextPosition(3), viewport, false, this.damageToFarmer, this.isGlider, (Character) this))
           {
-            // ISSUE: explicit reference operation
-            // ISSUE: variable of a reference type
-            float& local = @this.position.X;
-            // ISSUE: explicit reference operation
-            double num1 = (double) ^local;
+            double num1 = (double) this.position.X;
             double speed = (double) this.speed;
             elapsedGameTime = time.ElapsedGameTime;
             double num2 = (double) elapsedGameTime.Milliseconds / 64.0;
             double num3 = speed * num2;
             double num4 = num1 - num3;
-            // ISSUE: explicit reference operation
-            ^local = (float) num4;
+            this.position.X = (float) num4;
           }
           if (!currentLocation.isTilePassable(this.nextPosition(2), viewport) || !this.willDestroyObjectsUnderfoot)
             this.Halt();
@@ -811,33 +781,23 @@ namespace StardewValley.Monsters
           TimeSpan elapsedGameTime;
           if (flag1 && !flag2 && !currentLocation.isCollidingPosition(this.nextPosition(2), viewport, false, this.damageToFarmer, this.isGlider, (Character) this))
           {
-            // ISSUE: explicit reference operation
-            // ISSUE: variable of a reference type
-            float& local = @this.position.Y;
-            // ISSUE: explicit reference operation
-            double num1 = (double) ^local;
+            double num1 = (double) this.position.Y;
             double speed = (double) this.speed;
             elapsedGameTime = time.ElapsedGameTime;
             double num2 = (double) elapsedGameTime.Milliseconds / 64.0;
             double num3 = speed * num2;
             double num4 = num1 + num3;
-            // ISSUE: explicit reference operation
-            ^local = (float) num4;
+            this.position.Y = (float) num4;
           }
           else if (flag2 && !flag1 && !currentLocation.isCollidingPosition(this.nextPosition(0), viewport, false, this.damageToFarmer, this.isGlider, (Character) this))
           {
-            // ISSUE: explicit reference operation
-            // ISSUE: variable of a reference type
-            float& local = @this.position.Y;
-            // ISSUE: explicit reference operation
-            double num1 = (double) ^local;
+            double num1 = (double) this.position.Y;
             double speed = (double) this.speed;
             elapsedGameTime = time.ElapsedGameTime;
             double num2 = (double) elapsedGameTime.Milliseconds / 64.0;
             double num3 = speed * num2;
             double num4 = num1 - num3;
-            // ISSUE: explicit reference operation
-            ^local = (float) num4;
+            this.position.Y = (float) num4;
           }
           if (!currentLocation.isTilePassable(this.nextPosition(3), viewport) || !this.willDestroyObjectsUnderfoot)
             this.Halt();

@@ -465,11 +465,7 @@ namespace StardewValley
       }
       else
       {
-        // ISSUE: explicit reference operation
-        // ISSUE: variable of a reference type
-        float& local = @this.position.X;
-        // ISSUE: explicit reference operation
-        double num8 = (double) ^local;
+        double num8 = (double) this.position.X;
         double x = (double) this.motion.X;
         int num9;
         if (!this.timeBasedMotion)
@@ -484,8 +480,7 @@ namespace StardewValley
         double num10 = (double) num9;
         double num11 = x * num10;
         double num12 = num8 + num11;
-        // ISSUE: explicit reference operation
-        ^local = (float) num12;
+        this.position.X = (float) num12;
       }
       if (this.yPeriodic)
       {
@@ -493,11 +488,7 @@ namespace StardewValley
       }
       else
       {
-        // ISSUE: explicit reference operation
-        // ISSUE: variable of a reference type
-        float& local = @this.position.Y;
-        // ISSUE: explicit reference operation
-        double num8 = (double) ^local;
+        double num8 = (double) this.position.Y;
         double y = (double) this.motion.Y;
         int num9;
         if (!this.timeBasedMotion)
@@ -512,8 +503,7 @@ namespace StardewValley
         double num10 = (double) num9;
         double num11 = y * num10;
         double num12 = num8 + num11;
-        // ISSUE: explicit reference operation
-        ^local = (float) num12;
+        this.position.Y = (float) num12;
       }
       if (this.attachedCharacter != null)
       {
@@ -523,11 +513,7 @@ namespace StardewValley
         }
         else
         {
-          // ISSUE: explicit reference operation
-          // ISSUE: variable of a reference type
-          float& local = @this.attachedCharacter.position.X;
-          // ISSUE: explicit reference operation
-          double num8 = (double) ^local;
+          double num8 = (double) this.attachedCharacter.position.X;
           double x = (double) this.motion.X;
           int num9;
           if (!this.timeBasedMotion)
@@ -542,8 +528,7 @@ namespace StardewValley
           double num10 = (double) num9;
           double num11 = x * num10;
           double num12 = num8 + num11;
-          // ISSUE: explicit reference operation
-          ^local = (float) num12;
+          this.attachedCharacter.position.X = (float) num12;
         }
         if (this.yPeriodic)
         {
@@ -551,11 +536,7 @@ namespace StardewValley
         }
         else
         {
-          // ISSUE: explicit reference operation
-          // ISSUE: variable of a reference type
-          float& local = @this.attachedCharacter.position.Y;
-          // ISSUE: explicit reference operation
-          double num8 = (double) ^local;
+          double num8 = (double) this.attachedCharacter.position.Y;
           double y = (double) this.motion.Y;
           int num9;
           if (!this.timeBasedMotion)
@@ -570,15 +551,10 @@ namespace StardewValley
           double num10 = (double) num9;
           double num11 = y * num10;
           double num12 = num8 + num11;
-          // ISSUE: explicit reference operation
-          ^local = (float) num12;
+          this.attachedCharacter.position.Y = (float) num12;
         }
       }
-      // ISSUE: explicit reference operation
-      // ISSUE: variable of a reference type
-      float& local1 = @this.motion.X;
-      // ISSUE: explicit reference operation
-      double num13 = (double) ^local1;
+      double num13 = (double) this.motion.X;
       double x1 = (double) this.acceleration.X;
       int num14;
       if (!this.timeBasedMotion)
@@ -593,13 +569,8 @@ namespace StardewValley
       double num15 = (double) num14;
       double num16 = x1 * num15;
       double num17 = num13 + num16;
-      // ISSUE: explicit reference operation
-      ^local1 = (float) num17;
-      // ISSUE: explicit reference operation
-      // ISSUE: variable of a reference type
-      float& local2 = @this.motion.Y;
-      // ISSUE: explicit reference operation
-      double num18 = (double) ^local2;
+      this.motion.X = (float) num17;
+      double num18 = (double) this.motion.Y;
       double y1 = (double) this.acceleration.Y;
       int num19;
       if (!this.timeBasedMotion)
@@ -614,8 +585,7 @@ namespace StardewValley
       double num20 = (double) num19;
       double num21 = y1 * num20;
       double num22 = num18 + num21;
-      // ISSUE: explicit reference operation
-      ^local2 = (float) num22;
+      this.motion.Y = (float) num22;
       this.acceleration.X += this.accelerationChange.X;
       this.acceleration.Y += this.accelerationChange.Y;
       if (this.xStopCoordinate != -1 || this.yStopCoordinate != -1)

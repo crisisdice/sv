@@ -1159,13 +1159,9 @@ namespace StardewValley.Minigames
             {
               if (!this.playerBoundingBox.Intersects(this.shoppingCarpetNoPickup))
               {
-                // ISSUE: explicit reference operation
-                // ISSUE: variable of a reference type
-                Rectangle& local = @this.playerBoundingBox;
                 KeyValuePair<Rectangle, int> keyValuePair = this.storeItems.ElementAt<KeyValuePair<Rectangle, int>>(index);
                 Rectangle key1 = keyValuePair.Key;
-                // ISSUE: explicit reference operation
-                if ((^local).Intersects(key1))
+                if ((this.playerBoundingBox).Intersects(key1))
                 {
                   int coins = this.coins;
                   keyValuePair = this.storeItems.ElementAt<KeyValuePair<Rectangle, int>>(index);

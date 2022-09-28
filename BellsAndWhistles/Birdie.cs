@@ -151,6 +151,7 @@ namespace StardewValley.BellsAndWhistles
         case 3:
           if (Game1.random.NextDouble() < 0.008 && this.sprite.currentAnimation == null && (double) this.yJumpOffset >= 0.0)
           {
+            break;
             switch (Game1.random.Next(6))
             {
               case 0:

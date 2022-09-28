@@ -408,6 +408,7 @@ namespace StardewValley.Tools
                 rectangle.Offset(Game1.tileSize + Game1.pixelZoom * 3, -Game1.tileSize + Game1.pixelZoom * 8);
                 break;
             }
+            break;
           case 1:
             rectangle = new Rectangle(wielderBoundingBox.Right, y - num2 / 2 + num4, num2, num1);
             tileLocation1 = new Vector2((float) (rectangle.Center.X / Game1.tileSize), (float) ((Game1.random.NextDouble() < 0.5 ? rectangle.Top : rectangle.Bottom) / Game1.tileSize));
@@ -433,6 +434,7 @@ namespace StardewValley.Tools
                 rectangle.Offset(-Game1.tileSize / 2 - Game1.pixelZoom * 7, Game1.tileSize + Game1.pixelZoom * 2);
                 break;
             }
+            break;
           case 2:
             rectangle = new Rectangle(x - num1 / 2, wielderBoundingBox.Bottom, num1, num2);
             tileLocation1 = new Vector2((float) ((Game1.random.NextDouble() < 0.5 ? rectangle.Left : rectangle.Right) / Game1.tileSize), (float) (rectangle.Center.Y / Game1.tileSize));
@@ -459,6 +461,7 @@ namespace StardewValley.Tools
                 rectangle.Offset(-Game1.tileSize - Game1.pixelZoom, -Game1.tileSize / 2 - Game1.pixelZoom * 3);
                 break;
             }
+            break;
           case 3:
             rectangle = new Rectangle(wielderBoundingBox.Left - num2, y - num2 / 2 + num4, num2, num1);
             tileLocation1 = new Vector2((float) (rectangle.Left / Game1.tileSize), (float) ((Game1.random.NextDouble() < 0.5 ? rectangle.Top : rectangle.Bottom) / Game1.tileSize));
@@ -484,6 +487,7 @@ namespace StardewValley.Tools
                 rectangle.Offset(Game1.tileSize, Game1.tileSize);
                 break;
             }
+            break;
         }
       }
       rectangle.Inflate(this.addedAreaOfEffect, this.addedAreaOfEffect);

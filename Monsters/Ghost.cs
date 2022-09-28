@@ -143,27 +143,18 @@ namespace StardewValley.Monsters
       if (!boundingBox2.Intersects(Game1.player.GetBoundingBox()))
         return;
       int num9 = 0;
-      Vector2 vector2;
-      // ISSUE: explicit reference operation
-      // ISSUE: variable of a reference type
-      Vector2& local1 = @vector2;
       boundingBox2 = Game1.player.GetBoundingBox();
       double num10 = (double) (boundingBox2.Center.X / Game1.tileSize + Game1.random.Next(-12, 12));
       boundingBox2 = Game1.player.GetBoundingBox();
       double num11 = (double) (boundingBox2.Center.Y / Game1.tileSize + Game1.random.Next(-12, 12));
-      // ISSUE: explicit reference operation
-      ^local1 = new Vector2((float) num10, (float) num11);
+      Vector2 vector2 = new Vector2((float) num10, (float) num11);
       for (; num9 < 3 && ((double) vector2.X >= (double) Game1.currentLocation.map.GetLayer("Back").LayerWidth || (double) vector2.Y >= (double) Game1.currentLocation.map.GetLayer("Back").LayerHeight || ((double) vector2.X < 0.0 || (double) vector2.Y < 0.0) || (Game1.currentLocation.map.GetLayer("Back").Tiles[(int) vector2.X, (int) vector2.Y] == null || !Game1.currentLocation.isTilePassable(new Location((int) vector2.X, (int) vector2.Y), Game1.viewport) || vector2.Equals(new Vector2((float) (Game1.player.getStandingX() / Game1.tileSize), (float) (Game1.player.getStandingY() / Game1.tileSize))))); ++num9)
       {
-        // ISSUE: explicit reference operation
-        // ISSUE: variable of a reference type
-        Vector2& local2 = @vector2;
         boundingBox2 = Game1.player.GetBoundingBox();
         double num12 = (double) (boundingBox2.Center.X / Game1.tileSize + Game1.random.Next(-12, 12));
         boundingBox2 = Game1.player.GetBoundingBox();
         double num13 = (double) (boundingBox2.Center.Y / Game1.tileSize + Game1.random.Next(-12, 12));
-        // ISSUE: explicit reference operation
-        ^local2 = new Vector2((float) num12, (float) num13);
+        vector2 = new Vector2((float) num12, (float) num13);
       }
       if (num9 >= 3)
         return;

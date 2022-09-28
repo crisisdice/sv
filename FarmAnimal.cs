@@ -678,16 +678,11 @@ namespace StardewValley
 
     public void eatGrass(GameLocation environment)
     {
-      Vector2 index;
-      // ISSUE: explicit reference operation
-      // ISSUE: variable of a reference type
-      Vector2& local = @index;
       Microsoft.Xna.Framework.Rectangle boundingBox = this.GetBoundingBox();
       double num1 = (double) (boundingBox.Center.X / Game1.tileSize);
       boundingBox = this.GetBoundingBox();
       double num2 = (double) (boundingBox.Center.Y / Game1.tileSize);
-      // ISSUE: explicit reference operation
-      ^local = new Vector2((float) num1, (float) num2);
+      Vector2 index = new Vector2((float) num1, (float) num2);
       if (!environment.terrainFeatures.ContainsKey(index) || !(environment.terrainFeatures[index].GetType() == typeof (Grass)))
         return;
       this.isEating = true;

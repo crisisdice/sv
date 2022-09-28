@@ -122,10 +122,12 @@ namespace StardewValley.Characters
                     });
                     break;
                 }
+                break;
             }
           }
           else
             break;
+        break;
         case 1:
           if (Game1.timeOfDay < 2000 && Game1.random.NextDouble() < 0.001)
           {
@@ -199,6 +201,7 @@ namespace StardewValley.Characters
           }
           else
             break;
+        break;
       }
       if (this.sprite.currentAnimation != null)
         this.sprite.loop = false;

@@ -282,9 +282,6 @@ namespace StardewValley.Locations
         for (int index = 0; index < this.baubles.Count; ++index)
         {
           Vector2 vector2 = new Vector2();
-          // ISSUE: explicit reference operation
-          // ISSUE: variable of a reference type
-          Vector2& local = @vector2;
           double num1 = (double) this.baubles[index].X - (double) Math.Max(0.4f, Math.Min(1f, (float) index * 0.01f));
           double num2 = (double) index * 0.00999999977648258;
           double num3 = 2.0 * Math.PI;
@@ -293,8 +290,7 @@ namespace StardewValley.Locations
           double num4 = Math.Sin(num3 * milliseconds / 8000.0);
           double num5 = num2 * num4;
           double num6 = num1 - num5;
-          // ISSUE: explicit reference operation
-          (^local).X = (float) num6;
+          (vector2).X = (float) num6;
           vector2.Y = this.baubles[index].Y + Math.Max(0.5f, Math.Min(1.2f, (float) index * 0.02f));
           if ((double) vector2.Y > (double) this.map.DisplayHeight || (double) vector2.X < 0.0)
           {

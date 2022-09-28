@@ -1170,6 +1170,7 @@ namespace StardewValley
                 }
                 return true;
             }
+            break;
         }
       }
       else if (this.name.Equals("Preserves Jar"))

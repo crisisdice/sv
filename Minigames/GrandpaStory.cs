@@ -169,30 +169,20 @@ namespace StardewValley.Minigames
             double milliseconds5 = (double) elapsedGameTime.Milliseconds;
             double num3 = letterDyDy * milliseconds5;
             this.letterDy = (float) (letterDy1 + num3);
-            // ISSUE: explicit reference operation
-            // ISSUE: variable of a reference type
-            float& local1 = @this.letterPosition.Y;
-            // ISSUE: explicit reference operation
-            double num4 = (double) ^local1;
+            double num4 = (double) this.letterPosition.Y;
             double letterDy2 = (double) this.letterDy;
             elapsedGameTime = time.ElapsedGameTime;
             double milliseconds6 = (double) elapsedGameTime.Milliseconds;
             double num5 = letterDy2 * milliseconds6;
             double num6 = num4 + num5;
-            // ISSUE: explicit reference operation
-            ^local1 = (float) num6;
-            // ISSUE: explicit reference operation
-            // ISSUE: variable of a reference type
-            float& local2 = @this.letterPosition.X;
-            // ISSUE: explicit reference operation
-            double num7 = (double) ^local2;
+            this.letterPosition.Y = (float) num6;
+            double num7 = (double) this.letterPosition.X;
             double num8 = 0.00999999977648258;
             elapsedGameTime = time.ElapsedGameTime;
             double milliseconds7 = (double) elapsedGameTime.Milliseconds;
             double num9 = num8 * milliseconds7;
             double num10 = num7 + num9;
-            // ISSUE: explicit reference operation
-            ^local2 = (float) num10;
+            this.letterPosition.X = (float) num10;
             double letterScale = (double) this.letterScale;
             double num11 = 1.0 / 800.0;
             elapsedGameTime = time.ElapsedGameTime;

@@ -88,9 +88,7 @@ namespace StardewValley.Events
           title = Game1.content.LoadString("Strings\\StringsFromCSFiles:QuestionEvent.cs.6692");
         else
           title = Game1.content.LoadString("Strings\\Events:AnimalNamingTitle", (object) this.animal.displayType);
-        // ISSUE: variable of the null type
-        __Null local = null;
-        Game1.activeClickableMenu = (IClickableMenu) new NamingMenu(b, title, (string) local);
+        Game1.activeClickableMenu = (IClickableMenu) new NamingMenu(b, title, (string) null);
       }
       return false;
     }

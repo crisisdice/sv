@@ -86,39 +86,24 @@ namespace StardewValley.Events
       {
         if (this.timerSinceFade < 2000)
           return false;
-        // ISSUE: explicit reference operation
-        // ISSUE: variable of a reference type
-        float& local1 = @this.witchPosition.X;
-        // ISSUE: explicit reference operation
-        double num1 = (double) ^local1;
+        double num1 = (double) this.witchPosition.X;
         timeSpan = time.ElapsedGameTime;
         double num2 = (double) timeSpan.Milliseconds * 0.400000005960464;
         double num3 = num1 - num2;
-        // ISSUE: explicit reference operation
-        ^local1 = (float) num3;
-        // ISSUE: explicit reference operation
-        // ISSUE: variable of a reference type
-        float& local2 = @this.witchPosition.Y;
-        // ISSUE: explicit reference operation
-        double num4 = (double) ^local2;
+        this.witchPosition.X = (float) num3;
+        double num4 = (double) this.witchPosition.Y;
         timeSpan = time.TotalGameTime;
         double num5 = Math.Cos((double) timeSpan.Milliseconds * Math.PI / 512.0) * 1.0;
         double num6 = num4 + num5;
-        // ISSUE: explicit reference operation
-        ^local2 = (float) num6;
+        this.witchPosition.X = (float) num6;
       }
       else if (this.animationLoopsDone < 4)
       {
-        // ISSUE: explicit reference operation
-        // ISSUE: variable of a reference type
-        float& local = @this.witchPosition.Y;
-        // ISSUE: explicit reference operation
-        double num1 = (double) ^local;
+        double num1 = (double) this.witchPosition.Y;
         timeSpan = time.TotalGameTime;
         double num2 = Math.Cos((double) timeSpan.Milliseconds * Math.PI / 512.0) * 1.0;
         double num3 = num1 + num2;
-        // ISSUE: explicit reference operation
-        ^local = (float) num3;
+        this.witchPosition.Y = (float) num3;
         int witchAnimationTimer = this.witchAnimationTimer;
         timeSpan = time.ElapsedGameTime;
         int milliseconds = timeSpan.Milliseconds;
@@ -160,26 +145,16 @@ namespace StardewValley.Events
         this.witchFrame = 0;
         if (this.witchAnimationTimer > 1000 && (double) this.witchPosition.X > -999999.0)
         {
-          // ISSUE: explicit reference operation
-          // ISSUE: variable of a reference type
-          float& local1 = @this.witchPosition.Y;
-          // ISSUE: explicit reference operation
-          double num1 = (double) ^local1;
+          double num1 = (double) this.witchPosition.Y;
           timeSpan = time.TotalGameTime;
           double num2 = Math.Cos((double) timeSpan.Milliseconds * Math.PI / 256.0) * 2.0;
           double num3 = num1 + num2;
-          // ISSUE: explicit reference operation
-          ^local1 = (float) num3;
-          // ISSUE: explicit reference operation
-          // ISSUE: variable of a reference type
-          float& local2 = @this.witchPosition.X;
-          // ISSUE: explicit reference operation
-          double num4 = (double) ^local2;
+          this.witchPosition.Y = (float) num3;
+          double num4 = (double) this.witchPosition.X;
           timeSpan = time.ElapsedGameTime;
           double num5 = (double) timeSpan.Milliseconds * 0.400000005960464;
           double num6 = num4 - num5;
-          // ISSUE: explicit reference operation
-          ^local2 = (float) num6;
+          this.witchPosition.Y = (float) num6;
         }
         if ((double) this.witchPosition.X < (double) (Game1.viewport.X - Game1.tileSize * 2) || float.IsNaN(this.witchPosition.X))
         {

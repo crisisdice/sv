@@ -102,6 +102,7 @@ namespace StardewValley.Characters
                       this.CurrentBehavior = 2;
                       break;
                   }
+                break;
                 case 6:
                 case 7:
                   this.CurrentBehavior = 51;
@@ -110,6 +111,7 @@ namespace StardewValley.Characters
             }
             else
               break;
+          break;
           case 1:
             if (Game1.timeOfDay < 2000 && Game1.random.NextDouble() < 0.001)
             {
@@ -120,6 +122,7 @@ namespace StardewValley.Characters
               return;
             this.doEmote(24, true);
             return;
+          break;
           case 2:
             if (this.Sprite.currentFrame != 18 && this.sprite.currentAnimation == null)
             {
@@ -169,6 +172,7 @@ namespace StardewValley.Characters
             }
             else
               break;
+          break;
           case 50:
             if (this.withinPlayerThreshold(2))
             {
@@ -244,6 +248,7 @@ namespace StardewValley.Characters
             }
             else
               break;
+          break;
         }
         if (this.sprite.currentAnimation != null)
           this.sprite.loop = false;

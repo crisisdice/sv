@@ -1703,16 +1703,11 @@ label_112:;
     {
       int coinsToDrop = monster.coinsToDrop;
       List<int> objectsToDrop = monster.objectsToDrop;
-      Vector2 vector2;
-      // ISSUE: explicit reference operation
-      // ISSUE: variable of a reference type
-      Vector2& local = @vector2;
       Microsoft.Xna.Framework.Rectangle boundingBox = Game1.player.GetBoundingBox();
       double x1 = (double) boundingBox.Center.X;
       boundingBox = Game1.player.GetBoundingBox();
       double y1 = (double) boundingBox.Center.Y;
-      // ISSUE: explicit reference operation
-      ^local = new Vector2((float) x1, (float) y1);
+      Vector2 vector2 = new Vector2((float) x1, (float) y1);
       List<Item> extraDropItems = monster.getExtraDropItems();
       if (Game1.player.isWearingRing(526))
       {
@@ -6260,9 +6255,7 @@ label_369:
                   Object @object = new Object(460, 1, false, -1, 0);
                   int num = 1;
                   @object.specialItem = num != 0;
-                  // ISSUE: variable of the null type
-                  __Null local = null;
-                  player.addItemByMenuIfNecessary((Item) @object, (ItemGrabMenu.behaviorOnItemSelect) local);
+                  player.addItemByMenuIfNecessary((Item) @object, (ItemGrabMenu.behaviorOnItemSelect) null);
                   if (Game1.activeClickableMenu == null)
                   {
                     Game1.player.holdUpItemThenMessage((Item) new Object(460, 1, false, -1, 0), true);

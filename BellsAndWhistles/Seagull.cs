@@ -153,6 +153,7 @@ namespace StardewValley.BellsAndWhistles
                 }
                 break;
             }
+            break;
           }
           else
           {

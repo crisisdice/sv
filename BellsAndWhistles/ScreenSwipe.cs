@@ -39,16 +39,11 @@ namespace StardewValley.BellsAndWhistles
         durationAfterSwipe = 2700;
       this.swipeVelocity = swipeVelocity;
       this.durationAfterSwipe = durationAfterSwipe;
-      Vector2 vector2;
-      // ISSUE: explicit reference operation
-      // ISSUE: variable of a reference type
-      Vector2& local = @vector2;
       Viewport viewport = Game1.graphics.GraphicsDevice.Viewport;
       double num1 = (double) (viewport.Width / 2);
       viewport = Game1.graphics.GraphicsDevice.Viewport;
       double num2 = (double) (viewport.Height / 2);
-      // ISSUE: explicit reference operation
-      ^local = new Vector2((float) num1, (float) num2);
+      Vector2 vector2 = new Vector2((float) num1, (float) num2);
       if (which == 0)
         this.messageSource = new Rectangle(128, 1367, 110, 14);
       if (which == 0)
@@ -72,35 +67,23 @@ namespace StardewValley.BellsAndWhistles
       TimeSpan elapsedGameTime;
       if (this.durationAfterSwipe > 0 && this.bgDest.Width <= Game1.viewport.Width)
       {
-        // ISSUE: explicit reference operation
-        // ISSUE: variable of a reference type
-        int& local = @this.bgDest.Width;
-        // ISSUE: explicit reference operation
-        int num1 = ^local;
+        var num1 = this.bgDest.Width;
         double swipeVelocity = (double) this.swipeVelocity;
         elapsedGameTime = time.ElapsedGameTime;
         double totalMilliseconds = elapsedGameTime.TotalMilliseconds;
         int num2 = (int) (swipeVelocity * totalMilliseconds);
-        int num3 = num1 + num2;
-        // ISSUE: explicit reference operation
-        ^local = num3;
+        this.bgDest.Width = num1 + num2;
         if (this.bgDest.Width > Game1.viewport.Width)
           Game1.playSound("newRecord");
       }
       else if (this.durationAfterSwipe <= 0)
       {
-        // ISSUE: explicit reference operation
-        // ISSUE: variable of a reference type
-        int& local = @this.bgDest.X;
-        // ISSUE: explicit reference operation
-        int num1 = ^local;
+        int num1 = this.bgDest.X;
         double swipeVelocity = (double) this.swipeVelocity;
         elapsedGameTime = time.ElapsedGameTime;
         double totalMilliseconds = elapsedGameTime.TotalMilliseconds;
         int num2 = (int) (swipeVelocity * totalMilliseconds);
-        int num3 = num1 + num2;
-        // ISSUE: explicit reference operation
-        ^local = num3;
+        this.bgDest.X = num1 + num2;
         for (int index = 0; index < this.flairPositions.Count; ++index)
         {
           if ((double) this.bgDest.X > (double) this.flairPositions[index].X)

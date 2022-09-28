@@ -441,41 +441,29 @@ namespace StardewValley.Minigames
         this.sparkShower[index].dy += 0.105f;
         this.sparkShower[index].x += this.sparkShower[index].dx;
         this.sparkShower[index].y += this.sparkShower[index].dy;
-        // ISSUE: explicit reference operation
-        // ISSUE: variable of a reference type
-        Color& local1 = @this.sparkShower[index].c;
         double num2 = 0.0;
         double val1_1 = 0.0;
         timeSpan = time.TotalGameTime;
         double val2_1 = Math.Sin((double) timeSpan.Milliseconds / (20.0 * Math.PI / (double) this.sparkShower[index].dx)) * (double) byte.MaxValue;
         double num3 = Math.Max(val1_1, val2_1);
         int num4 = (int) (byte) (num2 + num3);
-        // ISSUE: explicit reference operation
-        (^local1).B = (byte) num4;
+        (this.sparkShower[index].c).B = (byte) num4;
         if (this.reachedFinish)
         {
-          // ISSUE: explicit reference operation
-          // ISSUE: variable of a reference type
-          Color& local2 = @this.sparkShower[index].c;
           double num5 = 0.0;
           double val1_2 = 0.0;
           timeSpan = time.TotalGameTime;
           double val2_2 = Math.Sin((double) (timeSpan.Milliseconds + 50) / (20.0 * Math.PI / (double) this.sparkShower[index].dx)) * (double) byte.MaxValue;
           double num6 = Math.Max(val1_2, val2_2);
           int num7 = (int) (byte) (num5 + num6);
-          // ISSUE: explicit reference operation
-          (^local2).R = (byte) num7;
-          // ISSUE: explicit reference operation
-          // ISSUE: variable of a reference type
-          Color& local3 = @this.sparkShower[index].c;
+          (this.sparkShower[index].c).R = (byte) num7;
           double num10 = 0.0;
           double val1_3 = 0.0;
           timeSpan = time.TotalGameTime;
           double val2_3 = Math.Sin((double) (timeSpan.Milliseconds + 100) / (20.0 * Math.PI / (double) this.sparkShower[index].dx)) * (double) byte.MaxValue;
           double num11 = Math.Max(val1_3, val2_3);
           int num12 = (int) (byte) (num10 + num11);
-          // ISSUE: explicit reference operation
-          (^local3).G = (byte) num12;
+          (this.sparkShower[index].c).G = (byte) num12;
           if ((int) this.sparkShower[index].c.R == 0)
             this.sparkShower[index].c.R = byte.MaxValue;
           if ((int) this.sparkShower[index].c.G == 0)

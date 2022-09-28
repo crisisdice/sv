@@ -3498,16 +3498,11 @@ label_90:
         {
           if (Game1.rainDrops[index].frame == 0)
           {
-            // ISSUE: explicit reference operation
-            // ISSUE: variable of a reference type
-            int& local = @Game1.rainDrops[index].accumulator;
-            // ISSUE: explicit reference operation
-            int num3 = ^local;
+            int num3 = Game1.rainDrops[index].accumulator;
             timeSpan = time.ElapsedGameTime;
             int milliseconds = timeSpan.Milliseconds;
             int num4 = num3 + milliseconds;
-            // ISSUE: explicit reference operation
-            ^local = num4;
+            Game1.rainDrops[index].accumulator = num4;
             if (Game1.rainDrops[index].accumulator >= 70)
             {
               Game1.rainDrops[index].position += new Vector2((float) (-Game1.tileSize / 4 + index * 8 / Game1.rainDrops.Length), (float) (Game1.tileSize / 2 - index * 8 / Game1.rainDrops.Length));
@@ -3520,16 +3515,11 @@ label_90:
           }
           else
           {
-            // ISSUE: explicit reference operation
-            // ISSUE: variable of a reference type
-            int& local = @Game1.rainDrops[index].accumulator;
-            // ISSUE: explicit reference operation
-            int num3 = ^local;
+            int num3 = Game1.rainDrops[index].accumulator;
             timeSpan = time.ElapsedGameTime;
             int milliseconds = timeSpan.Milliseconds;
             int num4 = num3 + milliseconds;
-            // ISSUE: explicit reference operation
-            ^local = num4;
+            Game1.rainDrops[index].accumulator = num4;
             if (Game1.rainDrops[index].accumulator > 70)
             {
               Game1.rainDrops[index].frame = (Game1.rainDrops[index].frame + 1) % 4;
@@ -11541,23 +11531,17 @@ label_127:
               string str2 = " mouseTransparency: ";
               objArray[index2] = (object) str2;
               int index3 = 2;
-              // ISSUE: variable of a boxed type
-              __Boxed<float> cursorTransparency = (ValueType) Game1.mouseCursorTransparency;
-              objArray[index3] = (object) cursorTransparency;
+              objArray[index3] = (object) (ValueType) Game1.mouseCursorTransparency;
               int index4 = 3;
               string str3 = " mousePosition: ";
               objArray[index4] = (object) str3;
               int index5 = 4;
-              // ISSUE: variable of a boxed type
-              __Boxed<int> mouseX = (ValueType) Game1.getMouseX();
-              objArray[index5] = (object) mouseX;
+              objArray[index5] = (object) (ValueType) Game1.getMouseX();
               int index6 = 5;
               string str4 = ",";
               objArray[index6] = (object) str4;
               int index7 = 6;
-              // ISSUE: variable of a boxed type
-              __Boxed<int> mouseY = (ValueType) Game1.getMouseY();
-              objArray[index7] = (object) mouseY;
+              objArray[index7] = (object) (ValueType) Game1.getMouseY();
               int index8 = 7;
               string newLine = Environment.NewLine;
               objArray[index8] = (object) newLine;
@@ -11674,17 +11658,14 @@ label_127:
           if ((double) Game1.getOldMouseX() >= (double) position1.X && (double) Game1.getOldMouseY() >= (double) position1.Y - (double) (11 * Game1.pixelZoom))
             Game1.drawWithBorder(Game1.content.LoadString("Strings\\StringsFromCSFiles:Game1.cs.3747"), Color.Black * 0.0f, Color.White, position1 + new Vector2((float) (-(double) Game1.dialogueFont.MeasureString(Game1.content.LoadString("Strings\\StringsFromCSFiles:Game1.cs.3747")).X - (double) (Game1.tileSize / 4) - (Game1.showingHealth ? (double) Game1.tileSize : 0.0)), (float) (Game1.tileSize * 3 / 2)));
         }
+
         if (Game1.currentLocation is MineShaft || Game1.currentLocation is Woods || (Game1.currentLocation is SlimeHutch || Game1.player.health < Game1.player.maxHealth))
         {
           Game1.showingHealth = true;
           position1.X -= (float) (48 + Game1.tileSize / 8 + (Game1.hitShakeTimer > 0 ? Game1.random.Next(-3, 4) : 0));
-          // ISSUE: explicit reference operation
-          // ISSUE: variable of a reference type
-          Vector2& local = @position1;
           Microsoft.Xna.Framework.Rectangle titleSafeArea = Game1.graphics.GraphicsDevice.Viewport.TitleSafeArea;
           double num2 = (double) (titleSafeArea.Bottom - 224 - (Game1.player.maxHealth - 100) - Game1.tileSize / 4 + 4);
-          // ISSUE: explicit reference operation
-          (^local).Y = (float) num2;
+          (position1).Y = (float) num2;
           SpriteBatch spriteBatch1 = Game1.spriteBatch;
           Texture2D mouseCursors1 = Game1.mouseCursors;
           Vector2 position2 = position1;
@@ -11839,13 +11820,9 @@ label_127:
               Microsoft.Xna.Framework.Rectangle bounds;
               if ((double) keyValuePair.Key.X * (double) Game1.tileSize > (double) (Game1.viewport.MaxCorner.X - 64))
               {
-                // ISSUE: explicit reference operation
-                // ISSUE: variable of a reference type
-                Vector2& local = @position2;
                 bounds = Game1.graphics.GraphicsDevice.Viewport.Bounds;
                 double num2 = (double) (bounds.Right - 8);
-                // ISSUE: explicit reference operation
-                (^local).X = (float) num2;
+                (position2).X = (float) num2;
                 rotation = 1.570796f;
               }
               else if ((double) keyValuePair.Key.X * (double) Game1.tileSize < (double) Game1.viewport.X)
@@ -11857,13 +11834,9 @@ label_127:
                 position2.X = keyValuePair.Key.X * (float) Game1.tileSize - (float) Game1.viewport.X;
               if ((double) keyValuePair.Key.Y * (double) Game1.tileSize > (double) (Game1.viewport.MaxCorner.Y - 64))
               {
-                // ISSUE: explicit reference operation
-                // ISSUE: variable of a reference type
-                Vector2& local = @position2;
                 bounds = Game1.graphics.GraphicsDevice.Viewport.Bounds;
                 double num2 = (double) (bounds.Bottom - 8);
-                // ISSUE: explicit reference operation
-                (^local).Y = (float) num2;
+                (position2).Y = (float) num2;
                 rotation = 3.141593f;
               }
               else
@@ -11997,10 +11970,8 @@ label_127:
         int height = num2;
         int num3 = 1;
         int num4 = 0;
-        // ISSUE: variable of the null type
-        __Null local = null;
         int num5 = Game1.objectDialoguePortraitPerson == null ? 0 : (Game1.currentSpeaker == null ? 1 : 0);
-        Game1.drawDialogueBox(x, y, width, height, num3 != 0, num4 != 0, (string) local, num5 != 0);
+        Game1.drawDialogueBox(x, y, width, height, num3 != 0, num4 != 0, (string) null, num5 != 0);
       }
       else
       {

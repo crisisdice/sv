@@ -1,12 +1,20 @@
-﻿using System;
-
 namespace StardewValley
 {
     public static class PrivateImplementationDetails
     {
-        public static uint ComputeStringHash(string str)
+
+      public static uint ComputeStringHash(string s)
+      {
+        uint num = new uint();
+        if (s != null)
         {
-            return 0;
+          num = 0x811c9dc5;
+          for (int i = 0; i < s.Length; i++)
+          {
+            num = (s[i] ^ num) * 0x1000193;
+          }
         }
+        return num;
+      }
     }
 }

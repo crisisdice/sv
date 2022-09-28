@@ -759,6 +759,7 @@ namespace StardewValley.Tools
                   vector2_2 = Vector2.Zero;
                   break;
               }
+            break;
             case 1:
               switch (this.lastUser.FarmerSprite.indexInCurrentAnimation)
               {
@@ -784,6 +785,7 @@ namespace StardewValley.Tools
                   vector2_2 = Vector2.Zero;
                   break;
               }
+            break;
             case 2:
               switch (this.lastUser.FarmerSprite.indexInCurrentAnimation)
               {
@@ -809,6 +811,7 @@ namespace StardewValley.Tools
                   vector2_2 = Vector2.Zero;
                   break;
               }
+            break;
             case 3:
               switch (this.lastUser.FarmerSprite.indexInCurrentAnimation)
               {
@@ -831,6 +834,7 @@ namespace StardewValley.Tools
                   vector2_2 = Game1.GlobalToLocal(Game1.viewport, this.lastUser.position + new Vector2((float) (32 + (32 - (Game1.tileSize * 2 - 8))), (float) ((double) this.lastUser.armOffset.Y - (double) (Game1.tileSize / 2) + 8.0)));
                   break;
               }
+            break;
             default:
               vector2_2 = Vector2.Zero;
               break;
@@ -1200,15 +1204,11 @@ namespace StardewValley.Tools
           FishingRod.chargeSound.SetVariable("Pitch", 2400f * this.castingPower);
         if ((double) this.castingPower == 1.0 || (double) this.castingPower == 0.0)
           this.castingTimerSpeed = -this.castingTimerSpeed;
-        // ISSUE: explicit reference operation
-        // ISSUE: variable of a reference type
-        Vector2& local = @who.armOffset;
         double num6 = 2.0;
         timeSpan = DateTime.Now.TimeOfDay;
         double num7 = Math.Round(Math.Sin(timeSpan.TotalMilliseconds / 250.0), 2);
         double num8 = num6 * num7;
-        // ISSUE: explicit reference operation
-        (^local).Y = (float) num8;
+        (who.armOffset).Y = (float) num8;
         who.jitterStrength = Math.Max(0.0f, this.castingPower - 0.5f);
         if ((this.usedGamePadToCast || Mouse.GetState().LeftButton != ButtonState.Released) && (!this.usedGamePadToCast || !Game1.options.gamepadControls || !GamePad.GetState(Game1.playerOneIndex).IsButtonUp(Buttons.X)) || !Game1.areAllOfTheseKeysUp(Keyboard.GetState(), Game1.options.useToolButton))
           return;
@@ -1302,13 +1302,9 @@ namespace StardewValley.Tools
             who.FarmerSprite.setCurrentFrame(89, 0, 10, 1, true, false);
             break;
         }
-        // ISSUE: explicit reference operation
-        // ISSUE: variable of a reference type
-        Vector2& local = @who.armOffset;
         timeSpan = DateTime.Now.TimeOfDay;
         double num = Math.Round(Math.Sin(timeSpan.TotalMilliseconds / 250.0), 2) + (who.FacingDirection == 1 || who.FacingDirection == 3 ? 1.0 : -1.0);
-        // ISSUE: explicit reference operation
-        (^local).Y = (float) num;
+        (who.armOffset).Y = (float) num;
         if (!who.IsMainPlayer)
           return;
         if ((double) this.timeUntilFishingBite != -1.0)

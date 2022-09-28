@@ -84,26 +84,16 @@ namespace StardewValley.Events
       {
         if (this.timerSinceFade < 2000)
           return false;
-        // ISSUE: explicit reference operation
-        // ISSUE: variable of a reference type
-        float& local1 = @this.fairyPosition.X;
-        // ISSUE: explicit reference operation
-        double num1 = (double) ^local1;
+        double num1 = (double) this.fairyPosition.X;
         timeSpan = time.ElapsedGameTime;
         double num2 = (double) timeSpan.Milliseconds * 0.100000001490116;
         double num3 = num1 - num2;
-        // ISSUE: explicit reference operation
-        ^local1 = (float) num3;
-        // ISSUE: explicit reference operation
-        // ISSUE: variable of a reference type
-        float& local2 = @this.fairyPosition.Y;
-        // ISSUE: explicit reference operation
-        double num4 = (double) ^local2;
+        this.fairyPosition.X = (float) num3;
+        double num4 = (double) this.fairyPosition.Y;
         timeSpan = time.TotalGameTime;
         double num5 = Math.Cos((double) timeSpan.Milliseconds * Math.PI / 512.0) * 1.0;
         double num6 = num4 + num5;
-        // ISSUE: explicit reference operation
-        ^local2 = (float) num6;
+        this.fairyPosition.Y = (float) num6;
         int fairyFrame1 = this.fairyFrame;
         timeSpan = time.TotalGameTime;
         this.fairyFrame = timeSpan.Milliseconds % 500 <= 250 ? 0 : 1;
@@ -163,26 +153,16 @@ namespace StardewValley.Events
         this.fairyFrame = timeSpan.Milliseconds % 500 <= 250 ? 0 : 1;
         if (this.fairyAnimationTimer > 2000 && (double) this.fairyPosition.Y > -999999.0)
         {
-          // ISSUE: explicit reference operation
-          // ISSUE: variable of a reference type
-          float& local1 = @this.fairyPosition.X;
-          // ISSUE: explicit reference operation
-          double num1 = (double) ^local1;
+          double num1 = (double) this.fairyPosition.X;
           timeSpan = time.TotalGameTime;
           double num2 = Math.Cos((double) timeSpan.Milliseconds * Math.PI / 256.0) * 2.0;
           double num3 = num1 + num2;
-          // ISSUE: explicit reference operation
-          ^local1 = (float) num3;
-          // ISSUE: explicit reference operation
-          // ISSUE: variable of a reference type
-          float& local2 = @this.fairyPosition.Y;
-          // ISSUE: explicit reference operation
-          double num4 = (double) ^local2;
+          this.fairyPosition.X = (float) num3;
+          double num4 = (double) this.fairyPosition.Y;
           timeSpan = time.ElapsedGameTime;
           double num5 = (double) timeSpan.Milliseconds * 0.200000002980232;
           double num6 = num4 - num5;
-          // ISSUE: explicit reference operation
-          ^local2 = (float) num6;
+          this.fairyPosition.Y = (float) num6;
         }
         if ((double) this.fairyPosition.Y < (double) (Game1.viewport.Y - Game1.tileSize * 2) || float.IsNaN(this.fairyPosition.Y))
         {

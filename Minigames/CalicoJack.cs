@@ -117,16 +117,11 @@ namespace StardewValley.Minigames
       {
         if (this.playerCards[index][1] > 0)
         {
-          // ISSUE: explicit reference operation
-          // ISSUE: variable of a reference type
-          int& local = @this.playerCards[index][1];
-          // ISSUE: explicit reference operation
-          int num1 = ^local;
+          int num1 = this.playerCards[index][1];
           elapsedGameTime = time.ElapsedGameTime;
           int milliseconds = elapsedGameTime.Milliseconds;
           int num2 = num1 - milliseconds;
-          // ISSUE: explicit reference operation
-          ^local = num2;
+          this.playerCards[index][1] = num2;
           if (this.playerCards[index][1] <= 0)
             this.playerCards[index][1] = 0;
         }
@@ -135,16 +130,11 @@ namespace StardewValley.Minigames
       {
         if (this.dealerCards[index][1] > 0)
         {
-          // ISSUE: explicit reference operation
-          // ISSUE: variable of a reference type
-          int& local = @this.dealerCards[index][1];
-          // ISSUE: explicit reference operation
-          int num1 = ^local;
+          int num1 = this.dealerCards[index][1];
           elapsedGameTime = time.ElapsedGameTime;
           int milliseconds = elapsedGameTime.Milliseconds;
           int num2 = num1 - milliseconds;
-          // ISSUE: explicit reference operation
-          ^local = num2;
+          this.dealerCards[index][1] = num2;
           if (this.dealerCards[index][1] <= 0)
             this.dealerCards[index][1] = 0;
         }

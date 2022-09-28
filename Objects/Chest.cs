@@ -146,6 +146,7 @@ namespace StardewValley.Objects
 
     public void dumpContents()
     {
+
       Random random = new Random((int) this.tileLocation.X + (int) this.tileLocation.Y + (int) Game1.uniqueIDForThisGame + (Game1.mine == null || !(Game1.currentLocation is MineShaft) ? 0 : Game1.mine.mineLevel));
       if (this.coins <= 0 && this.items.Count <= 0)
       {

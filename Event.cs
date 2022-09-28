@@ -439,9 +439,6 @@ namespace StardewValley
         if (location is Farm)
         {
           Point positionForFarmer = Farm.getFrontDoorPositionForFarmer(Game1.player);
-          // ISSUE: explicit reference operation
-          // ISSUE: variable of a reference type
-          xTile.Dimensions.Rectangle& local1 = @Game1.viewport;
           Viewport viewport;
           int num1;
           if (!Game1.currentLocation.IsOutdoors)
@@ -462,11 +459,7 @@ namespace StardewValley
             int val2_2 = Math.Min(val1_2, val2_1);
             num1 = Math.Max(val1_1, val2_2);
           }
-          // ISSUE: explicit reference operation
-          (^local1).X = num1;
-          // ISSUE: explicit reference operation
-          // ISSUE: variable of a reference type
-          xTile.Dimensions.Rectangle& local2 = @Game1.viewport;
+          Game1.viewport.X = num1;
           int num3;
           if (!Game1.currentLocation.IsOutdoors)
           {
@@ -489,8 +482,7 @@ namespace StardewValley
             int val2_2 = Math.Min(val1_2, val2_1);
             num3 = Math.Max(val1_1, val2_2);
           }
-          // ISSUE: explicit reference operation
-          (^local2).Y = num3;
+          Game1.viewport.Y = num3;
         }
         else if (!this.eventCommands[1].Equals("follow"))
         {
@@ -550,16 +542,10 @@ namespace StardewValley
           if ((double) this.viewportTarget.Y != 0.0)
             Game1.updateRainDropPositionForPlayerMovement((double) this.viewportTarget.Y < 0.0 ? 0 : 2, true, Math.Abs(this.viewportTarget.Y - (!Game1.player.isMoving() || Game1.player.facingDirection != 0 ? (!Game1.player.isMoving() || Game1.player.facingDirection != 2 ? 0.0f : (float) Game1.player.speed) : (float) -Game1.player.speed)));
           Game1.player.speed = speed;
-          // ISSUE: explicit reference operation
-          // ISSUE: variable of a reference type
-          float& local = @this.viewportTarget.Z;
-          // ISSUE: explicit reference operation
-          double num1 = (double) ^local;
+          double num1 = this.viewportTarget.Z;
           elapsedGameTime = time.ElapsedGameTime;
           double milliseconds = (double) elapsedGameTime.Milliseconds;
-          double num2 = num1 - milliseconds;
-          // ISSUE: explicit reference operation
-          ^local = (float) num2;
+          this.viewportTarget.Z = (float)( num1 - milliseconds );
           if ((double) this.viewportTarget.Z <= 0.0)
             this.viewportTarget = Vector3.Zero;
         }
@@ -2234,27 +2220,19 @@ label_652:
             Viewport viewport;
             if (Game1.viewport.X + Game1.viewport.Width > Game1.currentLocation.Map.DisplayWidth)
             {
-              // ISSUE: explicit reference operation
-              // ISSUE: variable of a reference type
-              xTile.Dimensions.Rectangle& local = @Game1.viewport;
               int displayWidth = Game1.currentLocation.Map.DisplayWidth;
               viewport = Game1.graphics.GraphicsDevice.Viewport;
               int width = viewport.Width;
               int num = displayWidth - width;
-              // ISSUE: explicit reference operation
-              (^local).X = num;
+              (Game1.viewport).X = num;
             }
             if (Game1.viewport.Y + Game1.viewport.Height > Game1.currentLocation.Map.DisplayHeight)
             {
-              // ISSUE: explicit reference operation
-              // ISSUE: variable of a reference type
-              xTile.Dimensions.Rectangle& local = @Game1.viewport;
               int displayHeight = Game1.currentLocation.Map.DisplayHeight;
               viewport = Game1.graphics.GraphicsDevice.Viewport;
               int height = viewport.Height;
               int num = displayHeight - height;
-              // ISSUE: explicit reference operation
-              (^local).Y = num;
+              (Game1.viewport).Y = num;
             }
             if (Game1.viewport.X < 0)
               Game1.viewport.X = 0;
@@ -2613,9 +2591,7 @@ label_652:
       temporarySpriteById.yStopCoordinate = num5;
       TemporaryAnimatedSprite.endBehavior endBehavior = new TemporaryAnimatedSprite.endBehavior(this.samGround);
       temporarySpriteById.reachedStopCoordinate = endBehavior;
-      // ISSUE: variable of the null type
-      __Null local = null;
-      temporarySpriteById.endFunction = (TemporaryAnimatedSprite.endBehavior) local;
+      temporarySpriteById.endFunction = (TemporaryAnimatedSprite.endBehavior) null;
       actorByName.Sprite.setCurrentAnimation(new List<FarmerSprite.AnimationFrame>()
       {
         new FarmerSprite.AnimationFrame(29, 100),
@@ -2630,12 +2606,8 @@ label_652:
     {
       TemporaryAnimatedSprite temporarySpriteById = Game1.currentLocation.getTemporarySpriteByID(1);
       Game1.playSound("thudStep");
-      // ISSUE: variable of the null type
-      __Null local1 = null;
-      temporarySpriteById.attachedCharacter = (Character) local1;
-      // ISSUE: variable of the null type
-      __Null local2 = null;
-      temporarySpriteById.reachedStopCoordinate = (TemporaryAnimatedSprite.endBehavior) local2;
+      temporarySpriteById.attachedCharacter = (Character) null;
+      temporarySpriteById.reachedStopCoordinate = (TemporaryAnimatedSprite.endBehavior) null;
       int num1 = -1;
       temporarySpriteById.totalNumberOfLoops = num1;
       double num2 = 0.0;
@@ -2668,9 +2640,7 @@ label_652:
       temporarySpriteById.motion = vector2;
       double num1 = 0.0;
       temporarySpriteById.rotationChange = (float) num1;
-      // ISSUE: variable of the null type
-      __Null local = null;
-      temporarySpriteById.reachedStopCoordinate = (TemporaryAnimatedSprite.endBehavior) local;
+      temporarySpriteById.reachedStopCoordinate = (TemporaryAnimatedSprite.endBehavior) null;
       int num2 = 1;
       temporarySpriteById.animationLength = num2;
       double num3 = 999999.0;
@@ -6055,6 +6025,7 @@ label_652:
               newValue2 = this.mySecretSanta.name.Equals("George") ? Game1.content.LoadString("Strings\\StringsFromCSFiles:Event.cs.1503") : Game1.LoadStringByGender(this.mySecretSanta.gender, "Strings\\StringsFromCSFiles:Event.cs.1504");
               break;
           }
+          break;
         case 2:
           newValue1 = Game1.LoadStringByGender(this.mySecretSanta.gender, "Strings\\StringsFromCSFiles:Event.cs.1497");
           newValue2 = Game1.LoadStringByGender(this.mySecretSanta.gender, "Strings\\StringsFromCSFiles:Event.cs.1498");

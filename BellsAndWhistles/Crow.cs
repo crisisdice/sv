@@ -170,6 +170,7 @@ namespace StardewValley.BellsAndWhistles
             }
             break;
           }
+          break;
       }
       return base.update(time, environment);
     }

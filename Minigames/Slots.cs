@@ -480,16 +480,11 @@ namespace StardewValley.Minigames
       int verticalShadowOffset = -1;
       double num28 = 0.349999994039536;
       Utility.drawWithShadow(b3, mouseCursors, position, sourceRect, white, (float) num25, zero, (float) pixelZoom, num26 != 0, (float) num27, horizontalShadowOffset, verticalShadowOffset, (float) num28);
-      Vector2 vector2;
-      // ISSUE: explicit reference operation
-      // ISSUE: variable of a reference type
-      Vector2& local = @vector2;
       viewport2 = Game1.graphics.GraphicsDevice.Viewport;
       double num29 = (double) (viewport2.Width / 2 + 50 * Game1.pixelZoom);
       viewport2 = Game1.graphics.GraphicsDevice.Viewport;
       double num30 = (double) (viewport2.Height / 2 - 88 * Game1.pixelZoom);
-      // ISSUE: explicit reference operation
-      ^local = new Vector2((float) num29, (float) num30);
+      Vector2 vector2 = new Vector2((float) num29, (float) num30);
       IClickableMenu.drawTextureBox(b, Game1.mouseCursors, new Rectangle(375, 357, 3, 3), (int) vector2.X, (int) vector2.Y, Game1.tileSize * 6, Game1.tileSize * 11, Color.White, (float) Game1.pixelZoom, true);
       b.Draw(Game1.objectSpriteSheet, vector2 + new Vector2((float) (Game1.pixelZoom * 2), (float) (Game1.pixelZoom * 2)), new Rectangle?(Game1.getSourceRectForStandardTileSheet(Game1.objectSpriteSheet, this.getIconIndex(7), 16, 16)), Color.White, 0.0f, Vector2.Zero, (float) Game1.pixelZoom, SpriteEffects.None, 0.99f);
       SpriteText.drawString(b, "x2", (int) vector2.X + Game1.tileSize * 3 + Game1.pixelZoom * 4, (int) vector2.Y + Game1.pixelZoom * 6, 9999, -1, 99999, 1f, 0.88f, false, -1, "", 4);

@@ -131,9 +131,7 @@ namespace StardewValley.Locations
           List<string> mailReceived = Game1.player.mailReceived;
           string str1 = "lb_";
           keyValuePair = this.lostBooksLocations.ElementAt<KeyValuePair<int, Vector2>>(index);
-          // ISSUE: variable of a boxed type
-          __Boxed<int> key1 = (ValueType) keyValuePair.Key;
-          string str2 = str1 + (object) key1;
+          string str2 = str1 + (object) (ValueType) keyValuePair.Key;
           if (!mailReceived.Contains(str2))
           {
             List<TemporaryAnimatedSprite> temporarySprites = this.temporarySprites;
