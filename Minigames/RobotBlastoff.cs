@@ -150,7 +150,7 @@ namespace StardewValley.Minigames
       double height = (double) viewport.Height;
       this.robotPosition = new Vector2((float) num, (float) height);
       this.tempSprites = new List<TemporaryAnimatedSprite>();
-      // TODO - test
+      // TODO - test if works
       //base.\u002Ector();
     }
   }

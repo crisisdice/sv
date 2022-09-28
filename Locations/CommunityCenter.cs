@@ -64,8 +64,9 @@ namespace StardewValley.Locations
       {
         this.bundles.Add(Convert.ToInt32(keyValuePair.Key.Split('/')[1]), new bool[keyValuePair.Value.Split('/')[2].Split(' ').Length]);
         this.bundleRewards.Add(Convert.ToInt32(keyValuePair.Key.Split('/')[1]), false);
-        this.areaToBundleDictionary[this.getAreaNumberFromName(keyValuePair.Key.Split('/')[0])].Add(Convert.ToInt32(keyValuePair.Key.Split('/')[1]));
-        this.bundleToAreaDictionary.Add(Convert.ToInt32(keyValuePair.Key.Split('/')[1]), this.getAreaNumberFromName(keyValuePair.Key.Split('/')[0]));
+        // TODO - fix bundle dictionary
+        // this.areaToBundleDictionary[this.getAreaNumberFromName(keyValuePair.Key.Split('/')[0])].Add(Convert.ToInt32(keyValuePair.Key.Split('/')[1]));
+        // this.bundleToAreaDictionary.Add(Convert.ToInt32(keyValuePair.Key.Split('/')[1]), this.getAreaNumberFromName(keyValuePair.Key.Split('/')[0]));
       }
     }
 

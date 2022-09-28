@@ -166,15 +166,10 @@ namespace StardewValley
 
     public static IEnumerator<int> getSaveEnumerator()
     {
-      // ISSUE: reference to a compiler-generated field
-      this.\u003C\u003E1__state = -1;
+      // TODO check if saving works
       if (SaveGame.CancelToTitle)
         throw new TaskCanceledException();
-      // ISSUE: reference to a compiler-generated field
-      this.\u003C\u003E2__current = 1;
-      // ISSUE: reference to a compiler-generated field
-      this.\u003C\u003E1__state = 1;
-      return true;
+      yield return 100;
     }
 
     public static void ensureFolderStructureExists(string tmpString = "")
@@ -203,19 +198,14 @@ namespace StardewValley
 
     public static IEnumerator<int> getLoadEnumerator(string file)
     {
-      // ISSUE: reference to a compiler-generated field
-      this.\u003C\u003E1__state = -1;
+      // TODO check if loading works
       Console.WriteLine("getLoadEnumerator('{0}')", (object) file);
       Game1.loadingMessage = "Accessing save...";
       SaveGame saveGame = new SaveGame();
       SaveGame.IsProcessing = true;
       if (SaveGame.CancelToTitle)
         Game1.ExitToTitle();
-      // ISSUE: reference to a compiler-generated field
-      this.\u003C\u003E2__current = 1;
-      // ISSUE: reference to a compiler-generated field
-      this.\u003C\u003E1__state = 1;
-      return true;
+      yield return 100;
     }
 
     public static void loadDataToFarmer(Farmer target)

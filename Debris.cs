@@ -119,8 +119,8 @@ namespace StardewValley
       boundingBox = Game1.player.GetBoundingBox();
       double y = (double) boundingBox.Center.Y;
       Vector2 playerPosition = new Vector2((float) x, (float) y);
-      // ISSUE: explicit constructor call
-      this.\u002Ector(debrisType, numberOfChunks, debrisOrigin1, playerPosition);
+      // TODO: explicit constructor call
+      //this.\u002Ector(debrisType, numberOfChunks, debrisOrigin1, playerPosition);
       this.item = item;
     }
 

@@ -7523,8 +7523,9 @@ label_81:
                   {
                     while (enumerator.MoveNext())
                     {
-                      foreach (bool flag in enumerator.Current)
-                        flag = false;
+                      // TODO - compiler issue
+                      // foreach (bool flag in enumerator.Current)
+                      //   flag = false;
                     }
                     return;
                   }
