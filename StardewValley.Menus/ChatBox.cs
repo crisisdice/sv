@@ -289,7 +289,7 @@ namespace StardewValley.Menus
 			case "printdiag":
 			{
 				StringBuilder sb = new StringBuilder();
-				Program.AppendDiagnostics(sb);
+				//Program.AppendDiagnostics(sb);
 				addInfoMessage(sb.ToString());
 				Console.WriteLine(sb.ToString());
 				break;

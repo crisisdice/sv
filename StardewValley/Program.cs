@@ -182,7 +182,7 @@ namespace StardewValley
 				sb.AppendLine("Stack Trace: " + e.StackTrace);
 				sb.AppendLine("");
 			}
-			AppendDiagnostics(sb);
+			//AppendDiagnostics(sb);
 			Game1.errorMessage = sb.ToString();
 			long targetTime = DateTime.Now.Ticks / 10000 + 25000;
 			if (!hasTriedToPrintLog)
