@@ -260,10 +260,10 @@ namespace StardewValley.Menus
 				{
 					switch ((geodeSpot.item as Object).parentSheetIndex)
 					{
-					case 536L:
+					case 536:
 						geodeDestructionYOffset += 64;
 						break;
-					case 537L:
+					case 537:
 						geodeDestructionYOffset += 128;
 						break;
 					}

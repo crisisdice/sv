@@ -4795,16 +4795,16 @@ namespace StardewValley
 						{
 							switch (item.parentSheetIndex)
 							{
-							case 384L:
+							case 384:
 								Game1.stats.GoldFound += (uint)item.Stack;
 								break;
-							case 378L:
+							case 378:
 								Game1.stats.CopperFound += (uint)item.Stack;
 								break;
-							case 380L:
+							case 380:
 								Game1.stats.IronFound += (uint)item.Stack;
 								break;
-							case 386L:
+							case 386:
 								Game1.stats.IridiumFound += (uint)item.Stack;
 								break;
 							}
@@ -5317,51 +5317,51 @@ namespace StardewValley
 				case Hat.HairDrawType.DrawObscuredHair:
 					switch (hair)
 					{
-					case 50L:
-					case 51L:
-					case 52L:
-					case 53L:
-					case 54L:
-					case 55L:
+					case 50:
+					case 51:
+					case 52:
+					case 53:
+					case 54:
+					case 55:
 						return hair;
-					case 48L:
+					case 48:
 						return 6;
-					case 49L:
+					case 49:
 						return 52;
-					case 3L:
+					case 3:
 						return 11;
-					case 1L:
-					case 5L:
-					case 6L:
-					case 9L:
-					case 11L:
-					case 17L:
-					case 20L:
-					case 23L:
-					case 24L:
-					case 25L:
-					case 27L:
-					case 28L:
-					case 29L:
-					case 30L:
-					case 32L:
-					case 33L:
-					case 34L:
-					case 36L:
-					case 39L:
-					case 41L:
-					case 43L:
-					case 44L:
-					case 45L:
-					case 46L:
-					case 47L:
+					case 1:
+					case 5:
+					case 6:
+					case 9:
+					case 11:
+					case 17:
+					case 20:
+					case 23:
+					case 24:
+					case 25:
+					case 27:
+					case 28:
+					case 29:
+					case 30:
+					case 32:
+					case 33:
+					case 34:
+					case 36:
+					case 39:
+					case 41:
+					case 43:
+					case 44:
+					case 45:
+					case 46:
+					case 47:
 						return hair;
-					case 18L:
-					case 19L:
-					case 21L:
-					case 31L:
+					case 18:
+					case 19:
+					case 21:
+					case 31:
 						return 23;
-					case 42L:
+					case 42:
 						return 46;
 					default:
 						if ((int)hair >= 16)

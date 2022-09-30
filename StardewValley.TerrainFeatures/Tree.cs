@@ -467,20 +467,20 @@ namespace StardewValley.TerrainFeatures
 						int seedIndex = -1;
 						switch (treeType)
 						{
-						case 3L:
+						case 3:
 							seedIndex = 311;
 							break;
-						case 1L:
+						case 1:
 							seedIndex = 309;
 							break;
-						case 8L:
+						case 8:
 							seedIndex = 292;
 							break;
-						case 2L:
+						case 2:
 							seedIndex = 310;
 							break;
-						case 6L:
-						case 9L:
+						case 6:
+						case 9:
 							seedIndex = 88;
 							break;
 						}
@@ -675,19 +675,19 @@ namespace StardewValley.TerrainFeatures
 					}
 					switch (t.upgradeLevel)
 					{
-					case 0L:
+					case 0:
 						damage2 = 1f;
 						break;
-					case 1L:
+					case 1:
 						damage2 = 1.25f;
 						break;
-					case 2L:
+					case 2:
 						damage2 = 1.67f;
 						break;
-					case 3L:
+					case 3:
 						damage2 = 2.5f;
 						break;
-					case 4L:
+					case 4:
 						damage2 = 5f;
 						break;
 					}
@@ -742,19 +742,19 @@ namespace StardewValley.TerrainFeatures
 				{
 					switch (t.upgradeLevel)
 					{
-					case 0L:
+					case 0:
 						damage = 2f;
 						break;
-					case 1L:
+					case 1:
 						damage = 2.5f;
 						break;
-					case 2L:
+					case 2:
 						damage = 3.34f;
 						break;
-					case 3L:
+					case 3:
 						damage = 5f;
 						break;
-					case 4L:
+					case 4:
 						damage = 10f;
 						break;
 					}
@@ -875,26 +875,26 @@ namespace StardewValley.TerrainFeatures
 			}
 			switch (treeType)
 			{
-			case 8L:
+			case 8:
 			{
 				Random r = new Random((int)Game1.uniqueIDForThisGame + (int)Game1.stats.DaysPlayed + 73137);
 				tapper_instance.heldObject.Value = new Object(92, r.Next(3, 8));
 				tapper_instance.minutesUntilReady.Value = Utility.CalculateMinutesUntilMorning(Game1.timeOfDay, (int)Math.Max(1.0, Math.Floor(1f * time_multiplier)));
 				break;
 			}
-			case 2L:
+			case 2:
 				tapper_instance.heldObject.Value = new Object(724, 1);
 				tapper_instance.minutesUntilReady.Value = Utility.CalculateMinutesUntilMorning(Game1.timeOfDay, (int)Math.Max(1.0, Math.Floor(9f * time_multiplier)));
 				break;
-			case 1L:
+			case 1:
 				tapper_instance.heldObject.Value = new Object(725, 1);
 				tapper_instance.minutesUntilReady.Value = Utility.CalculateMinutesUntilMorning(Game1.timeOfDay, (int)Math.Max(1.0, Math.Floor(7f * time_multiplier)));
 				break;
-			case 3L:
+			case 3:
 				tapper_instance.heldObject.Value = new Object(726, 1);
 				tapper_instance.minutesUntilReady.Value = Utility.CalculateMinutesUntilMorning(Game1.timeOfDay, (int)Math.Max(1.0, Math.Floor(5f * time_multiplier)));
 				break;
-			case 7L:
+			case 7:
 				if (previous_object == null)
 				{
 					tapper_instance.heldObject.Value = new Object(420, 1);
@@ -933,9 +933,9 @@ namespace StardewValley.TerrainFeatures
 					break;
 				}
 				break;
-			case 4L:
-			case 5L:
-			case 6L:
+			case 4:
+			case 5:
+			case 6:
 				break;
 			}
 		}
@@ -1053,11 +1053,11 @@ namespace StardewValley.TerrainFeatures
 			if ((int)growthStage < 5)
 			{
 				Microsoft.Xna.Framework.Rectangle sourceRect = Microsoft.Xna.Framework.Rectangle.Empty;
-				sourceRect = growthStage switch
+				sourceRect = growthStage.Value switch
 				{
-					0L => new Microsoft.Xna.Framework.Rectangle(32, 128, 16, 16), 
-					1L => new Microsoft.Xna.Framework.Rectangle(0, 128, 16, 16), 
-					2L => new Microsoft.Xna.Framework.Rectangle(16, 128, 16, 16), 
+					0 => new Microsoft.Xna.Framework.Rectangle(32, 128, 16, 16), 
+					1 => new Microsoft.Xna.Framework.Rectangle(0, 128, 16, 16), 
+					2 => new Microsoft.Xna.Framework.Rectangle(16, 128, 16, 16), 
 					_ => new Microsoft.Xna.Framework.Rectangle(0, 96, 16, 32), 
 				};
 				spriteBatch.Draw(texture.Value, positionOnScreen - new Vector2(0f, (float)sourceRect.Height * scale), sourceRect, Color.White, 0f, Vector2.Zero, scale, flipped ? SpriteEffects.FlipHorizontally : SpriteEffects.None, layerDepth + (positionOnScreen.Y + (float)sourceRect.Height * scale) / 20000f);
@@ -1084,11 +1084,11 @@ namespace StardewValley.TerrainFeatures
 			if ((int)growthStage < 5)
 			{
 				Microsoft.Xna.Framework.Rectangle sourceRect = Microsoft.Xna.Framework.Rectangle.Empty;
-				sourceRect = growthStage switch
+				sourceRect = growthStage.Value switch
 				{
-					0L => new Microsoft.Xna.Framework.Rectangle(32, 128, 16, 16), 
-					1L => new Microsoft.Xna.Framework.Rectangle(0, 128, 16, 16), 
-					2L => new Microsoft.Xna.Framework.Rectangle(16, 128, 16, 16), 
+					0 => new Microsoft.Xna.Framework.Rectangle(32, 128, 16, 16), 
+					1 => new Microsoft.Xna.Framework.Rectangle(0, 128, 16, 16), 
+					2 => new Microsoft.Xna.Framework.Rectangle(16, 128, 16, 16), 
 					_ => new Microsoft.Xna.Framework.Rectangle(0, 96, 16, 32), 
 				};
 				spriteBatch.Draw(texture.Value, Game1.GlobalToLocal(Game1.viewport, new Vector2(tileLocation.X * 64f + 32f, tileLocation.Y * 64f - (float)(sourceRect.Height * 4 - 64) + (float)(((int)growthStage >= 3) ? 128 : 64))), sourceRect, fertilized ? Color.HotPink : Color.White, shakeRotation, new Vector2(8f, ((int)growthStage >= 3) ? 32 : 16), 4f, flipped ? SpriteEffects.FlipHorizontally : SpriteEffects.None, ((int)growthStage == 0) ? 0.0001f : ((float)getBoundingBox(tileLocation).Bottom / 10000f));

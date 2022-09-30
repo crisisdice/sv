@@ -259,13 +259,13 @@ namespace StardewValley.TerrainFeatures
 		{
 			switch (size)
 			{
-			case 0L:
-			case 3L:
+			case 0:
+			case 3:
 				return new Rectangle((int)tileLocation.X * 64, (int)tileLocation.Y * 64, 64, 64);
-			case 1L:
-			case 4L:
+			case 1:
+			case 4:
 				return new Rectangle((int)tileLocation.X * 64, (int)tileLocation.Y * 64, 128, 64);
-			case 2L:
+			case 2:
 				return new Rectangle((int)tileLocation.X * 64, (int)tileLocation.Y * 64, 192, 64);
 			default:
 				return Rectangle.Empty;
@@ -276,13 +276,13 @@ namespace StardewValley.TerrainFeatures
 		{
 			switch (size)
 			{
-			case 0L:
-			case 3L:
+			case 0:
+			case 3:
 				return new Rectangle((int)tileLocation.X * 64, (int)(tileLocation.Y - 1f) * 64, 64, 160);
-			case 1L:
-			case 4L:
+			case 1:
+			case 4:
 				return new Rectangle((int)tileLocation.X * 64, (int)(tileLocation.Y - 2f) * 64, 128, 256);
-			case 2L:
+			case 2:
 				return new Rectangle((int)tileLocation.X * 64, (int)(tileLocation.Y - 2f) * 64, 192, 256);
 			default:
 				return Rectangle.Empty;

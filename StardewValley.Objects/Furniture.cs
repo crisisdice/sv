@@ -301,16 +301,16 @@ namespace StardewValley.Objects
 			}
 			switch (parentSheetIndex)
 			{
-			case 1402L:
+			case 1402:
 				Game1.activeClickableMenu = new Billboard();
 				return true;
-			case 1308L:
+			case 1308:
 				Game1.activeClickableMenu = new ShopMenu(Utility.getAllWallpapersAndFloorsForFree(), 0, null, null, null, "Catalogue");
 				return true;
-			case 1226L:
+			case 1226:
 				Game1.activeClickableMenu = new ShopMenu(Utility.getAllFurnituresForFree(), 0, null, null, null, "Furniture Catalogue");
 				return true;
-			case 1309L:
+			case 1309:
 				Game1.playSound("openBox");
 				shakeTimer = 500;
 				if (Game1.getMusicTrackName().Equals("sam_acoustic1"))
@@ -814,19 +814,19 @@ namespace StardewValley.Objects
 			Point specialRotationOffsets = default(Point);
 			switch (furniture_type)
 			{
-			case 2L:
+			case 2:
 				specialRotationOffsets.Y = 1;
 				specialRotationOffsets.X = -1;
 				break;
-			case 5L:
+			case 5:
 				specialRotationOffsets.Y = 0;
 				specialRotationOffsets.X = -1;
 				break;
-			case 3L:
+			case 3:
 				specialRotationOffsets.X = -1;
 				specialRotationOffsets.Y = 1;
 				break;
-			case 12L:
+			case 12:
 				specialRotationOffsets.X = 0;
 				specialRotationOffsets.Y = 0;
 				break;
@@ -842,13 +842,13 @@ namespace StardewValley.Objects
 				int oldBoundingBoxHeight = boundingBox.Height;
 				switch (currentRotation)
 				{
-				case 0L:
-				case 2L:
+				case 0:
+				case 2:
 					boundingBox.Height = defaultBoundingBox.Height;
 					boundingBox.Width = defaultBoundingBox.Width;
 					break;
-				case 1L:
-				case 3L:
+				case 1:
+				case 3:
 					boundingBox.Height = boundingBox.Width + specialRotationOffsets.X * 64;
 					boundingBox.Width = oldBoundingBoxHeight + specialRotationOffsets.Y * 64;
 					break;
@@ -864,16 +864,16 @@ namespace StardewValley.Objects
 			{
 				switch (currentRotation)
 				{
-				case 0L:
+				case 0:
 					sourceRect.Value = defaultSourceRect;
 					break;
-				case 1L:
+				case 1:
 					sourceRect.Value = new Rectangle(defaultSourceRect.X + defaultSourceRect.Width, defaultSourceRect.Y, defaultSourceRect.Height - 16 + specialRotationOffsets.Y * 16 + specialSpecialSourceRectOffset.X * 16, defaultSourceRect.Width + 16 + specialRotationOffsets.X * 16 + specialSpecialSourceRectOffset.Y * 16);
 					break;
-				case 2L:
+				case 2:
 					sourceRect.Value = new Rectangle(defaultSourceRect.X + defaultSourceRect.Width + defaultSourceRect.Height - 16 + specialRotationOffsets.Y * 16 + specialSpecialSourceRectOffset.X * 16, defaultSourceRect.Y, defaultSourceRect.Width, defaultSourceRect.Height);
 					break;
-				case 3L:
+				case 3:
 					sourceRect.Value = new Rectangle(defaultSourceRect.X + defaultSourceRect.Width, defaultSourceRect.Y, defaultSourceRect.Height - 16 + specialRotationOffsets.Y * 16 + specialSpecialSourceRectOffset.X * 16, defaultSourceRect.Width + 16 + specialRotationOffsets.X * 16 + specialSpecialSourceRectOffset.Y * 16);
 					flipped.Value = true;
 					break;

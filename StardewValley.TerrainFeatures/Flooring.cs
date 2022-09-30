@@ -268,19 +268,19 @@ namespace StardewValley.TerrainFeatures
 		{
 			switch (whichFloor)
 			{
-			case 5L:
+			case 5:
 				return "dirtyHit";
-			case 0L:
-			case 2L:
-			case 4L:
-			case 11L:
+			case 0:
+			case 2:
+			case 4:
+			case 11:
 				return "woodyStep";
-			case 3L:
-			case 6L:
+			case 3:
+			case 6:
 				return "thudStep";
-			case 1L:
-			case 10L:
-			case 12L:
+			case 1:
+			case 10:
+			case 12:
 				return "stoneStep";
 			default:
 				return "stoneStep";
@@ -308,55 +308,55 @@ namespace StardewValley.TerrainFeatures
 				int item = -1;
 				switch (whichFloor)
 				{
-				case 4L:
+				case 4:
 					location.playSound("axchop");
 					item = 401;
 					break;
-				case 2L:
+				case 2:
 					location.playSound("axchop");
 					item = 331;
 					break;
-				case 6L:
+				case 6:
 					location.playSound("axchop");
 					item = 405;
 					break;
-				case 11L:
+				case 11:
 					location.playSound("axchop");
 					item = 840;
 					break;
-				case 0L:
+				case 0:
 					location.playSound("axchop");
 					item = 328;
 					break;
-				case 3L:
+				case 3:
 					location.playSound("hammer");
 					item = 333;
 					break;
-				case 5L:
+				case 5:
 					location.playSound("hammer");
 					item = 407;
 					break;
-				case 9L:
+				case 9:
 					location.playSound("hammer");
 					item = 415;
 					break;
-				case 7L:
+				case 7:
 					location.playSound("hammer");
 					item = 409;
 					break;
-				case 8L:
+				case 8:
 					location.playSound("hammer");
 					item = 411;
 					break;
-				case 10L:
+				case 10:
 					location.playSound("hammer");
 					item = 293;
 					break;
-				case 1L:
+				case 1:
 					location.playSound("hammer");
 					item = 329;
 					break;
-				case 12L:
+				case 12:
 					location.playSound("hammer");
 					item = 841;
 					break;

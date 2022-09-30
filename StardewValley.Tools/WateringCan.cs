@@ -101,19 +101,19 @@ namespace StardewValley.Tools
 				who.jitterStrength = 0.5f;
 				switch (upgradeLevel)
 				{
-				case 0L:
+				case 0:
 					waterCanMax = 40;
 					break;
-				case 1L:
+				case 1:
 					waterCanMax = 55;
 					break;
-				case 2L:
+				case 2:
 					waterCanMax = 70;
 					break;
-				case 3L:
+				case 3:
 					waterCanMax = 85;
 					break;
-				case 4L:
+				case 4:
 					waterCanMax = 100;
 					break;
 				}

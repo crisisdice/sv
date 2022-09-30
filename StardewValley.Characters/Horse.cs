@@ -636,38 +636,38 @@ namespace StardewValley.Characters
 			Vector2 hatOffset = Vector2.Zero;
 			switch (hat.Value.which)
 			{
-			case 14L:
+			case 14:
 				if ((int)facingDirection == 0)
 				{
 					hatOffset.X = -100f;
 				}
 				break;
-			case 6L:
+			case 6:
 				hatOffset.Y += 2f;
 				if (FacingDirection == 2)
 				{
 					hatOffset.Y -= 1f;
 				}
 				break;
-			case 10L:
+			case 10:
 				hatOffset.Y += 3f;
 				if ((int)facingDirection == 0)
 				{
 					draw_hat = false;
 				}
 				break;
-			case 9L:
-			case 32L:
+			case 9:
+			case 32:
 				if (FacingDirection == 0 || FacingDirection == 2)
 				{
 					hatOffset.Y += 1f;
 				}
 				break;
-			case 31L:
+			case 31:
 				hatOffset.Y += 1f;
 				break;
-			case 11L:
-			case 39L:
+			case 11:
+			case 39:
 				if (FacingDirection == 3 || FacingDirection == 1)
 				{
 					if (flip)
@@ -680,7 +680,7 @@ namespace StardewValley.Characters
 					}
 				}
 				break;
-			case 26L:
+			case 26:
 				if (FacingDirection == 3 || FacingDirection == 1)
 				{
 					if (flip)
@@ -693,8 +693,8 @@ namespace StardewValley.Characters
 					}
 				}
 				break;
-			case 56L:
-			case 67L:
+			case 56:
+			case 67:
 				if (FacingDirection == 0)
 				{
 					draw_hat = false;

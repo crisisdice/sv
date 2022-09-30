@@ -232,22 +232,22 @@ namespace StardewValley.Tools
 			{
 				switch (type)
 				{
-				case 0L:
-				case 3L:
+				case 0:
+				case 3:
 					if (defenseCooldown > 0)
 					{
 						coolDownLevel = (float)defenseCooldown / 1500f;
 					}
 					addedScale = addedSwordScale;
 					break;
-				case 2L:
+				case 2:
 					if (clubCooldown > 0)
 					{
 						coolDownLevel = (float)clubCooldown / 6000f;
 					}
 					addedScale = addedClubScale;
 					break;
-				case 1L:
+				case 1:
 					if (daggerCooldown > 0)
 					{
 						coolDownLevel = (float)daggerCooldown / 3000f;

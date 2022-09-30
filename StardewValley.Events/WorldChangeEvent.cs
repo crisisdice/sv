@@ -117,7 +117,7 @@ namespace StardewValley.Events
 			Game1.changeMusicTrack("nightTime");
 			switch (whichEvent)
 			{
-			case 13L:
+			case 13:
 				location = Game1.getLocationFromName("BoatTunnel");
 				location.resetForPlayerEntry();
 				targetXTile = 7;
@@ -141,7 +141,7 @@ namespace StardewValley.Events
 				soundInterval = 560;
 				sound = "crafting";
 				break;
-			case 12L:
+			case 12:
 			{
 				cutsceneLengthTimer += 3000;
 				Game1.isRaining = true;
@@ -174,7 +174,7 @@ namespace StardewValley.Events
 				DelayedAction.functionAfterDelay(obliterateJojaMartDoor, 6050);
 				break;
 			}
-			case 10L:
+			case 10:
 				location = Game1.getLocationFromName("Town");
 				location.resetForPlayerEntry();
 				targetXTile = 52;
@@ -199,7 +199,7 @@ namespace StardewValley.Events
 				Game1.currentLightSources.Add(new LightSource(4, new Vector2(targetXTile, targetYTile) * 64f, 4f, LightSource.LightContext.None, 0L));
 				sound = "axchop";
 				break;
-			case 11L:
+			case 11:
 				location = Game1.getLocationFromName("Town");
 				location.resetForPlayerEntry();
 				targetXTile = 95;
@@ -222,7 +222,7 @@ namespace StardewValley.Events
 				});
 				soundInterval = 800;
 				break;
-			case 0L:
+			case 0:
 				location = Game1.getLocationFromName("Farm");
 				location.resetForPlayerEntry();
 				targetXTile = 28;
@@ -263,7 +263,7 @@ namespace StardewValley.Events
 				Game1.currentLightSources.Add(new LightSource(4, new Vector2(targetXTile, targetYTile) * 64f, 4f, LightSource.LightContext.None, 0L));
 				sound = "axchop";
 				break;
-			case 1L:
+			case 1:
 				location = Game1.getLocationFromName("Farm");
 				location.resetForPlayerEntry();
 				targetXTile = 28;
@@ -303,7 +303,7 @@ namespace StardewValley.Events
 				});
 				soundInterval = 800;
 				break;
-			case 6L:
+			case 6:
 				location = Game1.getLocationFromName("BusStop");
 				location.resetForPlayerEntry();
 				targetXTile = 14;
@@ -328,7 +328,7 @@ namespace StardewValley.Events
 				Game1.currentLightSources.Add(new LightSource(4, new Vector2(targetXTile, targetYTile) * 64f, 4f, LightSource.LightContext.None, 0L));
 				sound = "clank";
 				break;
-			case 7L:
+			case 7:
 				location = Game1.getLocationFromName("BusStop");
 				location.resetForPlayerEntry();
 				targetXTile = 14;
@@ -387,7 +387,7 @@ namespace StardewValley.Events
 				Game1.currentLightSources.Add(new LightSource(4, new Vector2(targetXTile, targetYTile) * 64f, 4f, Color.DarkGoldenrod, LightSource.LightContext.None, 0L));
 				soundInterval = 500;
 				break;
-			case 2L:
+			case 2:
 				location = Game1.getLocationFromName("Town");
 				location.resetForPlayerEntry();
 				targetXTile = 105;
@@ -417,7 +417,7 @@ namespace StardewValley.Events
 				Game1.currentLightSources.Add(new LightSource(4, new Vector2(targetXTile, targetYTile) * 64f, 4f, LightSource.LightContext.None, 0L));
 				sound = "clank";
 				break;
-			case 3L:
+			case 3:
 				location = Game1.getLocationFromName("Town");
 				location.resetForPlayerEntry();
 				targetXTile = 105;
@@ -452,7 +452,7 @@ namespace StardewValley.Events
 				Game1.currentLightSources.Add(new LightSource(4, new Vector2(targetXTile, targetYTile) * 64f, 4f, Color.DarkGoldenrod, LightSource.LightContext.None, 0L));
 				soundInterval = 800;
 				break;
-			case 4L:
+			case 4:
 				location = Game1.getLocationFromName("Mountain");
 				location.resetForPlayerEntry();
 				targetXTile = 95;
@@ -488,7 +488,7 @@ namespace StardewValley.Events
 				Game1.currentLightSources.Add(new LightSource(4, new Vector2(targetXTile, targetYTile) * 64f, 4f, LightSource.LightContext.None, 0L));
 				sound = "axchop";
 				break;
-			case 5L:
+			case 5:
 				location = Game1.getLocationFromName("Mountain");
 				location.resetForPlayerEntry();
 				targetXTile = 95;
@@ -523,7 +523,7 @@ namespace StardewValley.Events
 				Game1.currentLightSources.Add(new LightSource(4, new Vector2(targetXTile, targetYTile) * 64f, 4f, Color.DarkGoldenrod, LightSource.LightContext.None, 0L));
 				soundInterval = 800;
 				break;
-			case 8L:
+			case 8:
 				location = Game1.getLocationFromName("Mountain");
 				location.resetForPlayerEntry();
 				targetXTile = 48;
@@ -556,7 +556,7 @@ namespace StardewValley.Events
 				Game1.currentLightSources.Add(new LightSource(4, new Vector2(targetXTile, targetYTile) * 64f, 4f, LightSource.LightContext.None, 0L));
 				sound = "thudStep";
 				break;
-			case 9L:
+			case 9:
 				location = Game1.getLocationFromName("Mountain");
 				location.resetForPlayerEntry();
 				Game1.player.activeDialogueEvents.Add("cc_Boulder", 7);
@@ -593,7 +593,7 @@ namespace StardewValley.Events
 				Game1.currentLightSources.Add(new LightSource(4, new Vector2(targetXTile, targetYTile) * 64f, 4f, Color.DarkGoldenrod, LightSource.LightContext.None, 0L));
 				soundInterval = 1000;
 				break;
-			case 14L:
+			case 14:
 			{
 				location = Game1.getLocationFromName("Mountain");
 				location.resetForPlayerEntry();

@@ -1020,16 +1020,16 @@ namespace StardewValley
 				int damage = 1;
 				switch (t.upgradeLevel)
 				{
-				case 1L:
+				case 1:
 					damage = 2;
 					break;
-				case 2L:
+				case 2:
 					damage = 3;
 					break;
-				case 3L:
+				case 3:
 					damage = 4;
 					break;
-				case 4L:
+				case 4:
 					damage = 5;
 					break;
 				}
@@ -1323,51 +1323,51 @@ namespace StardewValley
 			}
 			switch (parentSheetIndex)
 			{
-			case 678L:
+			case 678:
 				c = new Color(228, 109, 159);
 				break;
-			case 679L:
+			case 679:
 				c = new Color(253, 191, 46);
 				break;
-			case 313L:
-			case 314L:
-			case 315L:
+			case 313:
+			case 314:
+			case 315:
 				c = new Color(84, 101, 27);
 				break;
-			case 316L:
-			case 317L:
-			case 318L:
+			case 316:
+			case 317:
+			case 318:
 				c = new Color(109, 49, 196);
 				break;
-			case 319L:
+			case 319:
 				c = new Color(30, 216, 255);
 				sound = "breakingGlass";
 				animation = 47;
 				location.playSound("drumkit2");
 				toDrop = -1;
 				break;
-			case 320L:
+			case 320:
 				c = new Color(175, 143, 255);
 				sound = "breakingGlass";
 				animation = 47;
 				location.playSound("drumkit2");
 				toDrop = -1;
 				break;
-			case 321L:
+			case 321:
 				c = new Color(73, 255, 158);
 				sound = "breakingGlass";
 				animation = 47;
 				location.playSound("drumkit2");
 				toDrop = -1;
 				break;
-			case 792L:
-			case 793L:
-			case 794L:
+			case 792:
+			case 793:
+			case 794:
 				toDrop = 770;
 				break;
-			case 882L:
-			case 883L:
-			case 884L:
+			case 882:
+			case 883:
+			case 884:
 				c = new Color(30, 97, 68);
 				if (Game1.MasterPlayer.hasOrWillReceiveMail("islandNorthCaveOpened") && Game1.random.NextDouble() < 0.1 && !Game1.MasterPlayer.hasOrWillReceiveMail("gotMummifiedFrog"))
 				{
@@ -1606,7 +1606,7 @@ namespace StardewValley
 			{
 				switch (parentSheetIndex)
 				{
-				case 231L:
+				case 231:
 					if (!Game1.IsRainingHere(location) && location.IsOutdoors)
 					{
 						MinutesUntilReady -= 2400;
@@ -1616,11 +1616,11 @@ namespace StardewValley
 						}
 					}
 					break;
-				case 246L:
+				case 246:
 					heldObject.Value = new Object(395, 1);
 					readyForHarvest.Value = true;
 					break;
-				case 272L:
+				case 272:
 					if (!(location is AnimalHouse))
 					{
 						break;
@@ -1630,7 +1630,7 @@ namespace StardewValley
 						pair.Value.pet(Game1.player, is_auto_pet: true);
 					}
 					break;
-				case 165L:
+				case 165:
 					if (location == null || !(location is AnimalHouse))
 					{
 						break;
@@ -1652,26 +1652,26 @@ namespace StardewValley
 						}
 					}
 					break;
-				case 157L:
+				case 157:
 					if ((int)minutesUntilReady <= 0 && heldObject.Value != null && location.canSlimeHatchHere())
 					{
 						GreenSlime slime = null;
 						Vector2 v = new Vector2((int)tileLocation.X, (int)tileLocation.Y + 1) * 64f;
 						switch (heldObject.Value.parentSheetIndex)
 						{
-						case 680L:
+						case 680:
 							slime = new GreenSlime(v, 0);
 							break;
-						case 413L:
+						case 413:
 							slime = new GreenSlime(v, 40);
 							break;
-						case 437L:
+						case 437:
 							slime = new GreenSlime(v, 80);
 							break;
-						case 439L:
+						case 439:
 							slime = new GreenSlime(v, 121);
 							break;
-						case 857L:
+						case 857:
 							slime = new GreenSlime(v, 121);
 							slime.makeTigerSlime();
 							break;
@@ -1688,7 +1688,7 @@ namespace StardewValley
 						}
 					}
 					break;
-				case 10L:
+				case 10:
 					if (location.GetSeasonForLocation().Equals("winter"))
 					{
 						heldObject.Value = null;
@@ -1702,18 +1702,18 @@ namespace StardewValley
 						minutesUntilReady.Value = Utility.CalculateMinutesUntilMorning(Game1.timeOfDay, 4);
 					}
 					break;
-				case 108L:
-				case 109L:
+				case 108:
+				case 109:
 					base.ParentSheetIndex = 108;
 					if (Game1.currentSeason.Equals("winter") || Game1.currentSeason.Equals("fall"))
 					{
 						base.ParentSheetIndex = 109;
 					}
 					break;
-				case 117L:
+				case 117:
 					heldObject.Value = new Object(167, 1);
 					break;
-				case 104L:
+				case 104:
 					if (Game1.currentSeason.Equals("winter"))
 					{
 						minutesUntilReady.Value = 9999;
@@ -1723,7 +1723,7 @@ namespace StardewValley
 						minutesUntilReady.Value = -1;
 					}
 					break;
-				case 127L:
+				case 127:
 				{
 					NPC i = Utility.getTodaysBirthdayNPC(Game1.currentSeason, Game1.dayOfMonth);
 					minutesUntilReady.Value = 1;
@@ -1751,15 +1751,15 @@ namespace StardewValley
 					heldObject.Value = new Object(index, 1);
 					break;
 				}
-				case 160L:
+				case 160:
 					minutesUntilReady.Value = 1;
 					heldObject.Value = new Object(386, Game1.random.Next(2, 9));
 					break;
-				case 280L:
+				case 280:
 					minutesUntilReady.Value = 1;
 					heldObject.Value = new Object(74, 1);
 					break;
-				case 164L:
+				case 164:
 					if (!(location is Town))
 					{
 						break;
@@ -1786,7 +1786,7 @@ namespace StardewValley
 						Game1.getLocationFromName("AnimalShop").objects.Add(new Vector2(11f, 6f), new Object(Vector2.Zero, 164));
 					}
 					break;
-				case 128L:
+				case 128:
 					if (heldObject.Value == null)
 					{
 						int whichMushroom = 404;
@@ -1809,28 +1809,28 @@ namespace StardewValley
 			string season = location.GetSeasonForLocation();
 			switch (parentSheetIndex)
 			{
-			case 746L:
+			case 746:
 				if (season.Equals("winter"))
 				{
 					rot();
 				}
 				break;
-			case 784L:
-			case 785L:
+			case 784:
+			case 785:
 				if (Game1.dayOfMonth == 1 && !season.Equals("spring") && (bool)location.isOutdoors)
 				{
 					base.ParentSheetIndex++;
 				}
 				break;
-			case 674L:
-			case 675L:
+			case 674:
+			case 675:
 				if (Game1.dayOfMonth == 1 && season.Equals("summer") && (bool)location.isOutdoors)
 				{
 					base.ParentSheetIndex += 2;
 				}
 				break;
-			case 676L:
-			case 677L:
+			case 676:
+			case 677:
 				if (Game1.dayOfMonth == 1 && season.Equals("fall") && (bool)location.isOutdoors)
 				{
 					base.ParentSheetIndex += 2;
@@ -2156,29 +2156,29 @@ namespace StardewValley
 					int numItemsToTake = 0;
 					switch (dropIn.parentSheetIndex)
 					{
-					case 579L:
-					case 580L:
-					case 581L:
-					case 582L:
-					case 583L:
-					case 584L:
-					case 585L:
-					case 586L:
-					case 587L:
-					case 588L:
-					case 589L:
-					case 820L:
-					case 821L:
-					case 822L:
-					case 823L:
-					case 824L:
-					case 825L:
-					case 826L:
-					case 827L:
-					case 828L:
+					case 579:
+					case 580:
+					case 581:
+					case 582:
+					case 583:
+					case 584:
+					case 585:
+					case 586:
+					case 587:
+					case 588:
+					case 589:
+					case 820:
+					case 821:
+					case 822:
+					case 823:
+					case 824:
+					case 825:
+					case 826:
+					case 827:
+					case 828:
 						numItemsToTake = 1;
 						break;
-					case 881L:
+					case 881:
 						numItemsToTake = 5;
 						break;
 					}
@@ -2236,7 +2236,7 @@ namespace StardewValley
 				{
 					switch (dropIn.parentSheetIndex)
 					{
-					case 262L:
+					case 262:
 						heldObject.Value = new Object(Vector2.Zero, 346, "Beer", canBeSetDown: false, canBeGrabbed: true, isHoedirt: false, isSpawnedObject: false);
 						if (!probe)
 						{
@@ -2250,7 +2250,7 @@ namespace StardewValley
 							});
 						}
 						return true;
-					case 304L:
+					case 304:
 						heldObject.Value = new Object(Vector2.Zero, 303, "Pale Ale", canBeSetDown: false, canBeGrabbed: true, isHoedirt: false, isSpawnedObject: false);
 						if (!probe)
 						{
@@ -2264,7 +2264,7 @@ namespace StardewValley
 							});
 						}
 						return true;
-					case 815L:
+					case 815:
 						heldObject.Value = new Object(Vector2.Zero, 614, "Green Tea", canBeSetDown: false, canBeGrabbed: true, isHoedirt: false, isSpawnedObject: false);
 						if (!probe)
 						{
@@ -2278,7 +2278,7 @@ namespace StardewValley
 							});
 						}
 						return true;
-					case 433L:
+					case 433:
 						if (dropIn.Stack < 5 && !probe)
 						{
 							if (autoLoadChest == null)
@@ -2301,7 +2301,7 @@ namespace StardewValley
 							});
 						}
 						return true;
-					case 340L:
+					case 340:
 						heldObject.Value = new Object(Vector2.Zero, 459, "Mead", canBeSetDown: false, canBeGrabbed: true, isHoedirt: false, isSpawnedObject: false);
 						if (!probe)
 						{
@@ -2393,7 +2393,7 @@ namespace StardewValley
 					}
 					switch (dropIn.parentSheetIndex)
 					{
-					case 829L:
+					case 829:
 						heldObject.Value = new Object(Vector2.Zero, 342, "Pickled " + dropIn.Name, canBeSetDown: false, canBeGrabbed: true, isHoedirt: false, isSpawnedObject: false);
 						heldObject.Value.Price = 50 + dropIn.Price * 2;
 						if (!probe)
@@ -2409,7 +2409,7 @@ namespace StardewValley
 							});
 						}
 						return true;
-					case 812L:
+					case 812:
 					{
 						if ((int)dropIn.preservedParentSheetIndex == 698)
 						{
@@ -3153,13 +3153,13 @@ namespace StardewValley
 					Color c = Color.White;
 					switch (parentSheetIndex)
 					{
-					case 93L:
+					case 93:
 						c = new Color(1, 1, 1) * 0.9f;
 						break;
-					case 94L:
+					case 94:
 						c = Color.Yellow;
 						break;
-					case 95L:
+					case 95:
 						c = new Color(70, 0, 150) * 0.9f;
 						break;
 					}
@@ -3223,25 +3223,25 @@ namespace StardewValley
 			{
 				switch (parentSheetIndex)
 				{
-				case 93L:
-				case 286L:
-				case 287L:
-				case 288L:
-				case 293L:
-				case 297L:
-				case 328L:
-				case 329L:
-				case 331L:
-				case 333L:
-				case 401L:
-				case 405L:
-				case 407L:
-				case 409L:
-				case 411L:
-				case 415L:
-				case 590L:
-				case 840L:
-				case 841L:
+				case 93:
+				case 286:
+				case 287:
+				case 288:
+				case 293:
+				case 297:
+				case 328:
+				case 329:
+				case 331:
+				case 333:
+				case 401:
+				case 405:
+				case 407:
+				case 409:
+				case 411:
+				case 415:
+				case 590:
+				case 840:
+				case 841:
 					return true;
 				}
 			}
@@ -3394,7 +3394,7 @@ namespace StardewValley
 		{
 			switch (parentSheetIndex)
 			{
-			case 688L:
+			case 688:
 			{
 				int warp_location_x = 48;
 				int warp_location_y = 7;
@@ -3412,16 +3412,16 @@ namespace StardewValley
 				Game1.warpFarmer("Farm", warp_location.X, warp_location.Y, flip: false);
 				break;
 			}
-			case 689L:
+			case 689:
 				Game1.warpFarmer("Mountain", 31, 20, flip: false);
 				break;
-			case 690L:
+			case 690:
 				Game1.warpFarmer("Beach", 20, 4, flip: false);
 				break;
-			case 261L:
+			case 261:
 				Game1.warpFarmer("Desert", 35, 43, flip: false);
 				break;
-			case 886L:
+			case 886:
 				Game1.warpFarmer("IslandSouth", 11, 11, flip: false);
 				break;
 			}
@@ -3545,14 +3545,14 @@ namespace StardewValley
 				{
 					switch (parentSheetIndex)
 					{
-					case 681L:
+					case 681:
 						rainTotem(Game1.player);
 						return true;
-					case 261L:
-					case 688L:
-					case 689L:
-					case 690L:
-					case 886L:
+					case 261:
+					case 688:
+					case 689:
+					case 690:
+					case 886:
 					{
 						Game1.player.jitterStrength = 1f;
 						Color sprinkleColor = (((int)parentSheetIndex == 681) ? Color.SlateBlue : (((int)parentSheetIndex == 688) ? Color.LimeGreen : (((int)parentSheetIndex == 689) ? Color.OrangeRed : (((int)parentSheetIndex == 261) ? new Color(255, 200, 0) : Color.LightBlue))));
@@ -3668,19 +3668,19 @@ namespace StardewValley
 				}
 				switch (Utility.GetHorseWarpRestrictionsForFarmer(Game1.player).FirstOrDefault())
 				{
-				case 1L:
+				case 1:
 					Game1.showRedMessage(Game1.content.LoadString("Strings\\StringsFromCSFiles:HorseFlute_NoHorse"));
 					break;
-				case 2L:
+				case 2:
 					Game1.showRedMessage(Game1.content.LoadString("Strings\\StringsFromCSFiles:HorseFlute_InvalidLocation"));
 					break;
-				case 3L:
+				case 3:
 					Game1.showRedMessage(Game1.content.LoadString("Strings\\StringsFromCSFiles:HorseFlute_NoClearance"));
 					break;
-				case 4L:
+				case 4:
 					Game1.showRedMessage(Game1.content.LoadString("Strings\\StringsFromCSFiles:HorseFlute_InUse"));
 					break;
-				case 0L:
+				case 0:
 				{
 					Horse horse = null;
 					foreach (NPC character in Game1.player.currentLocation.characters)
@@ -3713,16 +3713,16 @@ namespace StardewValley
 						{
 							switch (Utility.GetHorseWarpRestrictionsForFarmer(Game1.player).FirstOrDefault())
 							{
-							case 0L:
+							case 0:
 								Game1.player.team.requestHorseWarpEvent.Fire(Game1.player.UniqueMultiplayerID);
 								break;
-							case 1L:
+							case 1:
 								Game1.showRedMessage(Game1.content.LoadString("Strings\\StringsFromCSFiles:HorseFlute_NoHorse"));
 								break;
-							case 2L:
+							case 2:
 								Game1.showRedMessage(Game1.content.LoadString("Strings\\StringsFromCSFiles:HorseFlute_InvalidLocation"));
 								break;
-							case 3L:
+							case 3:
 								Game1.showRedMessage(Game1.content.LoadString("Strings\\StringsFromCSFiles:HorseFlute_NoClearance"));
 								break;
 							}
@@ -3994,7 +3994,7 @@ namespace StardewValley
 				}
 				switch (parentSheetIndex)
 				{
-				case 231L:
+				case 231:
 					if (readyForHarvest.Value && who.IsLocalPlayer)
 					{
 						Object item3 = heldObject.Value;
@@ -4012,10 +4012,10 @@ namespace StardewValley
 						return true;
 					}
 					break;
-				case 247L:
+				case 247:
 					Game1.activeClickableMenu = new TailoringMenu();
 					return true;
-				case 165L:
+				case 165:
 					if (heldObject.Value != null && heldObject.Value is Chest && !(heldObject.Value as Chest).isEmpty())
 					{
 						if (justCheckingForActivity)
@@ -4026,7 +4026,7 @@ namespace StardewValley
 						return true;
 					}
 					break;
-				case 239L:
+				case 239:
 					shakeTimer = 500;
 					who.currentLocation.localSound("DwarvishSentry");
 					who.freezePause = 500;
@@ -4043,7 +4043,7 @@ namespace StardewValley
 						Game1.multipleDialogues(new string[1] { Game1.content.LoadString("Strings\\StringsFromCSFiles:FarmComputer_Intro", Game1.player.farmName.Value) + "^--------------^" + Game1.content.LoadString("Strings\\StringsFromCSFiles:FarmComputer_PiecesHay", (Game1.getLocationFromName("Farm") as Farm).piecesOfHay, Utility.numSilos() * 240) + "  ^" + Game1.content.LoadString("Strings\\StringsFromCSFiles:FarmComputer_TotalCrops", totalCrops) + "  ^" + Game1.content.LoadString("Strings\\StringsFromCSFiles:FarmComputer_CropsReadyForHarvest", totalCropsReadyForHarvest) + "  ^" + Game1.content.LoadString("Strings\\StringsFromCSFiles:FarmComputer_CropsUnwatered", totalUnwateredCrops) + "  ^" + ((totalGreenhouseCropsReadyForHarvest != -1) ? (Game1.content.LoadString("Strings\\StringsFromCSFiles:FarmComputer_CropsReadyForHarvest_Greenhouse", totalGreenhouseCropsReadyForHarvest) + "  ^") : "") + Game1.content.LoadString("Strings\\StringsFromCSFiles:FarmComputer_TotalOpenHoeDirt", totalOpenHoeDirt) + "  ^" + (Game1.getFarm().SpawnsForage() ? (Game1.content.LoadString("Strings\\StringsFromCSFiles:FarmComputer_TotalForage", totalForageItems) + "  ^") : "") + Game1.content.LoadString("Strings\\StringsFromCSFiles:FarmComputer_MachinesReady", numberOfMachinesReadyForHarvest) + "  ^" + Game1.content.LoadString("Strings\\StringsFromCSFiles:FarmComputer_FarmCave", flag ? Game1.content.LoadString("Strings\\Lexicon:QuestionDialogue_Yes") : Game1.content.LoadString("Strings\\Lexicon:QuestionDialogue_No")) + "  " });
 					}, 500);
 					return true;
-				case 238L:
+				case 238:
 				{
 					if (justCheckingForActivity)
 					{
@@ -4877,13 +4877,13 @@ namespace StardewValley
 			{
 				switch (parentSheetIndex)
 				{
-				case 29L:
-				case 30L:
+				case 29:
+				case 30:
 					showNextIndex.Value = (int)parentSheetIndex == 29;
 					scale.Y = Math.Max(0f, scale.Y -= minutes / 2 + 1);
 					break;
-				case 96L:
-				case 97L:
+				case 96:
+				case 97:
 					minutesUntilReady.Value -= minutes;
 					showNextIndex.Value = (int)parentSheetIndex == 96;
 					if ((int)minutesUntilReady <= 0)
@@ -4897,11 +4897,11 @@ namespace StardewValley
 						}
 					}
 					break;
-				case 141L:
-				case 142L:
+				case 141:
+				case 142:
 					showNextIndex.Value = (int)parentSheetIndex == 141;
 					break;
-				case 83L:
+				case 83:
 					showNextIndex.Value = false;
 					environment.removeLightSource((int)(tileLocation.X * 797f + tileLocation.Y * 13f + 666f));
 					break;
@@ -4920,9 +4920,9 @@ namespace StardewValley
 				}
 				switch (parentSheetIndex)
 				{
-				case 102L:
+				case 102:
 					return Game1.content.LoadString("Strings\\StringsFromCSFiles:Object.cs.12994");
-				case 535L:
+				case 535:
 					return Game1.content.LoadString("Strings\\StringsFromCSFiles:Object.cs.12995");
 				}
 			}
@@ -5471,19 +5471,19 @@ namespace StardewValley
 			{
 				switch (parentSheetIndex)
 				{
-				case 69L:
-				case 292L:
-				case 309L:
-				case 310L:
-				case 311L:
-				case 628L:
-				case 629L:
-				case 630L:
-				case 631L:
-				case 632L:
-				case 633L:
-				case 835L:
-				case 891L:
+				case 69:
+				case 292:
+				case 309:
+				case 310:
+				case 311:
+				case 628:
+				case 629:
+				case 630:
+				case 631:
+				case 632:
+				case 633:
+				case 835:
+				case 891:
 					if (!l.isTileOccupiedForPlacement(tile, this))
 					{
 						if (!l.CanPlantTreesHere(parentSheetIndex, (int)tile.X, (int)tile.Y))
@@ -5493,7 +5493,7 @@ namespace StardewValley
 						return true;
 					}
 					return false;
-				case 251L:
+				case 251:
 					if (!l.isTileOccupiedForPlacement(tile, this))
 					{
 						if (!l.isOutdoors)
@@ -5734,16 +5734,16 @@ namespace StardewValley
 					int whichTree = 1;
 					switch (parentSheetIndex)
 					{
-					case 292L:
+					case 292:
 						whichTree = 8;
 						break;
-					case 310L:
+					case 310:
 						whichTree = 2;
 						break;
-					case 311L:
+					case 311:
 						whichTree = 3;
 						break;
-					case 891L:
+					case 891:
 						whichTree = 7;
 						break;
 					}
@@ -6533,37 +6533,37 @@ namespace StardewValley
 			}
 			switch (parentSheetIndex)
 			{
-			case 388L:
+			case 388:
 				if (Game1.year <= 1)
 				{
 					return 10;
 				}
 				return 50;
-			case 390L:
+			case 390:
 				if (Game1.year <= 1)
 				{
 					return 20;
 				}
 				return 100;
-			case 382L:
+			case 382:
 				if (Game1.year <= 1)
 				{
 					return 120;
 				}
 				return 250;
-			case 378L:
+			case 378:
 				if (Game1.year <= 1)
 				{
 					return 80;
 				}
 				return 160;
-			case 380L:
+			case 380:
 				if (Game1.year <= 1)
 				{
 					return 150;
 				}
 				return 250;
-			case 384L:
+			case 384:
 				if (Game1.year <= 1)
 				{
 					return 350;

@@ -233,19 +233,19 @@ namespace StardewValley.TerrainFeatures
 				{
 					switch (t.upgradeLevel)
 					{
-					case 0L:
+					case 0:
 						damage = 2f;
 						break;
-					case 1L:
+					case 1:
 						damage = 2.5f;
 						break;
-					case 2L:
+					case 2:
 						damage = 3.34f;
 						break;
-					case 3L:
+					case 3:
 						damage = 5f;
 						break;
-					case 4L:
+					case 4:
 						damage = 10f;
 						break;
 					}
@@ -306,11 +306,11 @@ namespace StardewValley.TerrainFeatures
 
 		private Vector2 getPivot()
 		{
-			return bigness switch
+			return bigness.Value switch
 			{
-				3L => new Vector2(16f, 48f), 
-				2L => new Vector2(8f, 32f), 
-				1L => new Vector2(8f, 16f), 
+				3 => new Vector2(16f, 48f), 
+				2 => new Vector2(8f, 32f), 
+				1 => new Vector2(8f, 16f), 
 				_ => Vector2.Zero, 
 			};
 		}

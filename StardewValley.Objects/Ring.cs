@@ -128,7 +128,7 @@ namespace StardewValley.Objects
 			}
 			switch (indexInTileSheet)
 			{
-			case 516L:
+			case 516:
 				_lightSourceID = (int)uniqueID + (int)who.UniqueMultiplayerID;
 				while (location.sharedLights.ContainsKey(_lightSourceID.Value))
 				{
@@ -136,7 +136,7 @@ namespace StardewValley.Objects
 				}
 				location.sharedLights[_lightSourceID.Value] = new LightSource(1, new Vector2(who.Position.X + 21f, who.Position.Y + 64f), 5f, new Color(0, 50, 170), (int)uniqueID + (int)who.UniqueMultiplayerID, LightSource.LightContext.None, who.UniqueMultiplayerID);
 				break;
-			case 517L:
+			case 517:
 				_lightSourceID = (int)uniqueID + (int)who.UniqueMultiplayerID;
 				while (location.sharedLights.ContainsKey(_lightSourceID.Value))
 				{
@@ -144,13 +144,13 @@ namespace StardewValley.Objects
 				}
 				location.sharedLights[_lightSourceID.Value] = new LightSource(1, new Vector2(who.Position.X + 21f, who.Position.Y + 64f), 10f, new Color(0, 30, 150), (int)uniqueID + (int)who.UniqueMultiplayerID, LightSource.LightContext.None, who.UniqueMultiplayerID);
 				break;
-			case 518L:
+			case 518:
 				who.magneticRadius.Value += 64;
 				break;
-			case 519L:
+			case 519:
 				who.magneticRadius.Value += 128;
 				break;
-			case 888L:
+			case 888:
 				_lightSourceID = (int)uniqueID + (int)who.UniqueMultiplayerID;
 				while (location.sharedLights.ContainsKey(_lightSourceID.Value))
 				{
@@ -159,7 +159,7 @@ namespace StardewValley.Objects
 				location.sharedLights[_lightSourceID.Value] = new LightSource(1, new Vector2(who.Position.X + 21f, who.Position.Y + 64f), 10f, new Color(0, 80, 0), (int)uniqueID + (int)who.UniqueMultiplayerID, LightSource.LightContext.None, who.UniqueMultiplayerID);
 				who.magneticRadius.Value += 128;
 				break;
-			case 527L:
+			case 527:
 				_lightSourceID = (int)uniqueID + (int)who.UniqueMultiplayerID;
 				while (location.sharedLights.ContainsKey(_lightSourceID.Value))
 				{
@@ -169,31 +169,31 @@ namespace StardewValley.Objects
 				who.magneticRadius.Value += 128;
 				who.attackIncreaseModifier += 0.1f;
 				break;
-			case 529L:
+			case 529:
 				who.knockbackModifier += 0.1f;
 				break;
-			case 530L:
+			case 530:
 				who.weaponPrecisionModifier += 0.1f;
 				break;
-			case 531L:
+			case 531:
 				who.critChanceModifier += 0.1f;
 				break;
-			case 532L:
+			case 532:
 				who.critPowerModifier += 0.1f;
 				break;
-			case 533L:
+			case 533:
 				who.weaponSpeedModifier += 0.1f;
 				break;
-			case 534L:
+			case 534:
 				who.attackIncreaseModifier += 0.1f;
 				break;
-			case 810L:
+			case 810:
 				who.resilience += 5;
 				break;
-			case 859L:
+			case 859:
 				who.addedLuckLevel.Value++;
 				break;
-			case 887L:
+			case 887:
 				who.immunity += 4;
 				break;
 			}
@@ -203,21 +203,21 @@ namespace StardewValley.Objects
 		{
 			switch (indexInTileSheet)
 			{
-			case 516L:
-			case 517L:
+			case 516:
+			case 517:
 				if (_lightSourceID.HasValue)
 				{
 					location.removeLightSource(_lightSourceID.Value);
 					_lightSourceID = null;
 				}
 				break;
-			case 518L:
+			case 518:
 				who.magneticRadius.Value -= 64;
 				break;
-			case 519L:
+			case 519:
 				who.magneticRadius.Value -= 128;
 				break;
-			case 888L:
+			case 888:
 				if (_lightSourceID.HasValue)
 				{
 					location.removeLightSource(_lightSourceID.Value);
@@ -225,7 +225,7 @@ namespace StardewValley.Objects
 				}
 				who.magneticRadius.Value -= 128;
 				break;
-			case 527L:
+			case 527:
 				who.magneticRadius.Value -= 128;
 				who.attackIncreaseModifier -= 0.1f;
 				if (_lightSourceID.HasValue)
@@ -234,31 +234,31 @@ namespace StardewValley.Objects
 					_lightSourceID = null;
 				}
 				break;
-			case 529L:
+			case 529:
 				who.knockbackModifier -= 0.1f;
 				break;
-			case 530L:
+			case 530:
 				who.weaponPrecisionModifier -= 0.1f;
 				break;
-			case 531L:
+			case 531:
 				who.critChanceModifier -= 0.1f;
 				break;
-			case 532L:
+			case 532:
 				who.critPowerModifier -= 0.1f;
 				break;
-			case 533L:
+			case 533:
 				who.weaponSpeedModifier -= 0.1f;
 				break;
-			case 534L:
+			case 534:
 				who.attackIncreaseModifier -= 0.1f;
 				break;
-			case 810L:
+			case 810:
 				who.resilience -= 5;
 				break;
-			case 859L:
+			case 859:
 				who.addedLuckLevel.Value--;
 				break;
-			case 887L:
+			case 887:
 				who.immunity -= 4;
 				break;
 			}
@@ -278,12 +278,12 @@ namespace StardewValley.Objects
 			}
 			switch (indexInTileSheet)
 			{
-			case 516L:
-			case 517L:
+			case 516:
+			case 517:
 				onEquip(who, environment);
 				break;
-			case 527L:
-			case 888L:
+			case 527:
+			case 888:
 				_lightSourceID = (int)uniqueID + (int)who.UniqueMultiplayerID;
 				while (environment.sharedLights.ContainsKey(_lightSourceID.Value))
 				{
@@ -313,26 +313,26 @@ namespace StardewValley.Objects
 		{
 			switch (indexInTileSheet)
 			{
-			case 521L:
+			case 521:
 				if (Game1.random.NextDouble() < 0.1 + (double)((float)Game1.player.LuckLevel / 100f))
 				{
 					Game1.buffsDisplay.addOtherBuff(new Buff(20));
 					Game1.playSound("warrior");
 				}
 				break;
-			case 522L:
+			case 522:
 				Game1.player.health = Math.Min(Game1.player.maxHealth, Game1.player.health + 2);
 				break;
-			case 523L:
+			case 523:
 				Game1.buffsDisplay.addOtherBuff(new Buff(22));
 				break;
-			case 811L:
+			case 811:
 				location.explode(m.getTileLocation(), 2, who, damageFarmers: false);
 				break;
-			case 862L:
+			case 862:
 				Game1.player.Stamina = Math.Min(Game1.player.MaxStamina, Game1.player.Stamina + 4f);
 				break;
-			case 860L:
+			case 860:
 				if (Game1.random.NextDouble() < 0.25)
 				{
 					m.objectsToDrop.Add(395);

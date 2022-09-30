@@ -149,17 +149,17 @@ namespace StardewValley.Objects
 			{
 				switch (item.parentSheetIndex)
 				{
-				case 426L:
+				case 426:
 					return 4f;
-				case 424L:
+				case 424:
 					return 4f;
-				case 348L:
+				case 348:
 					return 1f;
-				case 459L:
+				case 459:
 					return 2f;
-				case 303L:
+				case 303:
 					return 1.66f;
-				case 346L:
+				case 346:
 					return 2f;
 				}
 			}

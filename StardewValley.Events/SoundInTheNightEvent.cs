@@ -57,7 +57,7 @@ namespace StardewValley.Events
 			f.updateMap();
 			switch (behavior)
 			{
-			case 0L:
+			case 0:
 			{
 				soundName = "UFO";
 				message = Game1.content.LoadString("Strings\\Events:SoundInTheNight_UFO");
@@ -76,7 +76,7 @@ namespace StardewValley.Events
 				}
 				break;
 			}
-			case 1L:
+			case 1:
 			{
 				soundName = "Meteorite";
 				message = Game1.content.LoadString("Strings\\Events:SoundInTheNight_Meteorite");
@@ -94,7 +94,7 @@ namespace StardewValley.Events
 				}
 				break;
 			}
-			case 2L:
+			case 2:
 				soundName = "dogs";
 				if (r.NextDouble() < 0.5)
 				{
@@ -113,7 +113,7 @@ namespace StardewValley.Events
 					return true;
 				}
 				return false;
-			case 3L:
+			case 3:
 			{
 				soundName = "owl";
 				int attempts;
@@ -131,7 +131,7 @@ namespace StardewValley.Events
 				}
 				break;
 			}
-			case 4L:
+			case 4:
 				soundName = "thunder_small";
 				message = Game1.content.LoadString("Strings\\Events:SoundInTheNight_Earthquake");
 				break;
@@ -184,14 +184,14 @@ namespace StardewValley.Events
 			Farm f = Game1.getLocationFromName("Farm") as Farm;
 			switch (behavior)
 			{
-			case 0L:
+			case 0:
 			{
 				Object o = new Object(targetLocation, 96);
 				o.minutesUntilReady.Value = 24000 - Game1.timeOfDay;
 				f.objects.Add(targetLocation, o);
 				break;
 			}
-			case 1L:
+			case 1:
 				if (f.terrainFeatures.ContainsKey(targetLocation))
 				{
 					f.terrainFeatures.Remove(targetLocation);
@@ -210,7 +210,7 @@ namespace StardewValley.Events
 				}
 				f.resourceClumps.Add(new ResourceClump(622, 2, 2, targetLocation));
 				break;
-			case 2L:
+			case 2:
 			{
 				AnimalHouse indoors = targetBuilding.indoors.Value as AnimalHouse;
 				long idOfRemove = 0L;
@@ -236,7 +236,7 @@ namespace StardewValley.Events
 					break;
 				}
 			}
-			case 3L:
+			case 3:
 				f.objects.Add(targetLocation, new Object(targetLocation, 95));
 				break;
 			}

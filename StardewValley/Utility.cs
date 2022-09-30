@@ -7685,39 +7685,39 @@ namespace StardewValley
 			{
 				switch ((item as Object).parentSheetIndex)
 				{
-				case 535L:
+				case 535:
 					if (Game1.activeClickableMenu == null && !Game1.player.hasOrWillReceiveMail("geodeFound"))
 					{
 						Game1.player.mailReceived.Add("geodeFound");
 						Game1.player.holdUpItemThenMessage(item);
 					}
 					break;
-				case 378L:
+				case 378:
 					if (!Game1.player.hasOrWillReceiveMail("copperFound"))
 					{
 						Game1.addMailForTomorrow("copperFound", noLetter: true);
 					}
 					break;
-				case 428L:
+				case 428:
 					if (!Game1.player.hasOrWillReceiveMail("clothFound"))
 					{
 						Game1.addMailForTomorrow("clothFound", noLetter: true);
 					}
 					break;
-				case 102L:
+				case 102:
 					Game1.stats.NotesFound++;
 					break;
-				case 390L:
+				case 390:
 					Game1.stats.StoneGathered++;
 					if (Game1.stats.StoneGathered >= 100 && !Game1.player.hasOrWillReceiveMail("robinWell"))
 					{
 						Game1.addMailForTomorrow("robinWell");
 					}
 					break;
-				case 74L:
+				case 74:
 					Game1.stats.PrismaticShardsFound++;
 					break;
-				case 72L:
+				case 72:
 					Game1.stats.DiamondsFound++;
 					break;
 				}

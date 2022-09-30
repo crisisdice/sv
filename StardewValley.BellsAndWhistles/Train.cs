@@ -85,31 +85,31 @@ namespace StardewValley.BellsAndWhistles
 			double chanceForCoalCar = 1.0;
 			switch (type)
 			{
-			case 0L:
+			case 0:
 				chanceForPassengerCar = 0.2;
 				chanceForCoalCar = 0.2;
 				break;
-			case 1L:
+			case 1:
 				chanceForPassengerCar = 0.0;
 				chanceForCoalCar = 0.0;
 				color = Color.DimGray;
 				break;
-			case 3L:
+			case 3:
 				chanceForPassengerCar = 1.0;
 				chanceForCoalCar = 0.0;
 				speed = 0.4f;
 				break;
-			case 2L:
+			case 2:
 				chanceForPassengerCar = 0.0;
 				chanceForCoalCar = 0.7;
 				break;
-			case 5L:
+			case 5:
 				chanceForCoalCar = 0.0;
 				chanceForPassengerCar = 0.0;
 				color = Color.MediumBlue;
 				speed = 0.4f;
 				break;
-			case 6L:
+			case 6:
 				chanceForPassengerCar = 0.0;
 				chanceForCoalCar = 1.0;
 				color = Color.Red;

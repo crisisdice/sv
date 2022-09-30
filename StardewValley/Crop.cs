@@ -348,10 +348,10 @@ namespace StardewValley
 				Random r2 = new Random((int)Game1.stats.DaysPlayed + (int)Game1.uniqueIDForThisGame / 2 + xTile * 1000 + yTile * 2000);
 				switch (whichForageCrop)
 				{
-				case 1L:
+				case 1:
 					o = new Object(399, 1);
 					break;
-				case 2L:
+				case 2:
 					soil.shake((float)Math.PI / 48f, (float)Math.PI / 40f, (float)(xTile * 64) < Game1.player.Position.X);
 					return false;
 				}
@@ -402,13 +402,13 @@ namespace StardewValley
 				Random r = new Random(xTile * 7 + yTile * 11 + (int)Game1.stats.DaysPlayed + (int)Game1.uniqueIDForThisGame);
 				switch (soil.fertilizer)
 				{
-				case 368L:
+				case 368:
 					fertilizerQualityLevel = 1;
 					break;
-				case 369L:
+				case 369:
 					fertilizerQualityLevel = 2;
 					break;
-				case 919L:
+				case 919:
 					fertilizerQualityLevel = 3;
 					break;
 				}
@@ -711,16 +711,16 @@ namespace StardewValley
 				string season = Game1.currentSeason;
 				switch (whichForageCrop)
 				{
-				case 495L:
+				case 495:
 					season = "spring";
 					break;
-				case 496L:
+				case 496:
 					season = "summer";
 					break;
-				case 497L:
+				case 497:
 					season = "fall";
 					break;
-				case 498L:
+				case 498:
 					season = "winter";
 					break;
 				}

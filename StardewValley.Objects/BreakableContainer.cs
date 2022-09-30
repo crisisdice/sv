@@ -284,7 +284,7 @@ namespace StardewValley.Objects
 			}
 			switch (containerType)
 			{
-			case 118L:
+			case 118:
 				if (r.NextDouble() < 0.65)
 				{
 					if (r.NextDouble() < 0.8)
@@ -360,7 +360,7 @@ namespace StardewValley.Objects
 					}
 				}
 				break;
-			case 120L:
+			case 120:
 				if (r.NextDouble() < 0.65)
 				{
 					if (r.NextDouble() < 0.8)
@@ -436,8 +436,8 @@ namespace StardewValley.Objects
 					}
 				}
 				break;
-			case 122L:
-			case 124L:
+			case 122:
+			case 124:
 				if (r.NextDouble() < 0.65)
 				{
 					if (r.NextDouble() < 0.8)
@@ -513,7 +513,7 @@ namespace StardewValley.Objects
 					}
 				}
 				break;
-			case 174L:
+			case 174:
 				if (r.NextDouble() < 0.1)
 				{
 					Game1.player.team.RequestLimitedNutDrops("VolcanoBarrel", location, x * 64, y * 64, 5);
