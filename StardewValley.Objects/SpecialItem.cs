@@ -40,25 +40,25 @@ namespace StardewValley.Objects
 				{
 					switch (which)
 					{
-					case 4L:
+					case 4:
 						_displayName = Game1.content.LoadString("Strings\\StringsFromCSFiles:SpecialItem.cs.13088");
 						break;
-					case 2L:
+					case 2:
 						_displayName = Game1.content.LoadString("Strings\\StringsFromCSFiles:SpecialItem.cs.13089");
 						break;
-					case 3L:
+					case 3:
 						_displayName = Game1.content.LoadString("Strings\\Objects:SpecialCharm");
 						break;
-					case 6L:
+					case 6:
 						_displayName = Game1.content.LoadString("Strings\\Objects:DarkTalisman");
 						break;
-					case 7L:
+					case 7:
 						_displayName = Game1.content.LoadString("Strings\\Objects:MagicInk");
 						break;
-					case 5L:
+					case 5:
 						_displayName = Game1.content.LoadString("Strings\\Objects:MagnifyingGlass");
 						break;
-					case 99L:
+					case 99:
 						if ((int)Game1.player.maxItems == 36)
 						{
 							_displayName = Game1.content.LoadString("Strings\\StringsFromCSFiles:GameLocation.cs.8709");
@@ -78,25 +78,25 @@ namespace StardewValley.Objects
 				{
 					switch (which)
 					{
-					case 4L:
+					case 4:
 						_displayName = Game1.content.LoadString("Strings\\StringsFromCSFiles:SpecialItem.cs.13088");
 						break;
-					case 2L:
+					case 2:
 						_displayName = Game1.content.LoadString("Strings\\StringsFromCSFiles:SpecialItem.cs.13089");
 						break;
-					case 3L:
+					case 3:
 						_displayName = Game1.content.LoadString("Strings\\Objects:SpecialCharm");
 						break;
-					case 6L:
+					case 6:
 						_displayName = Game1.content.LoadString("Strings\\Objects:DarkTalisman");
 						break;
-					case 5L:
+					case 5:
 						_displayName = Game1.content.LoadString("Strings\\Objects:MagnifyingGlass");
 						break;
-					case 7L:
+					case 7:
 						_displayName = Game1.content.LoadString("Strings\\Objects:MagicInk");
 						break;
-					case 99L:
+					case 99:
 						if ((int)Game1.player.maxItems == 36)
 						{
 							_displayName = Game1.content.LoadString("Strings\\StringsFromCSFiles:GameLocation.cs.8709");
@@ -136,17 +136,17 @@ namespace StardewValley.Objects
 				{
 					switch (which)
 					{
-					case 4L:
+					case 4:
 						return "Skull Key";
-					case 2L:
+					case 2:
 						return "Club Card";
-					case 6L:
+					case 6:
 						return Game1.content.LoadString("Strings\\Objects:DarkTalisman");
-					case 7L:
+					case 7:
 						return Game1.content.LoadString("Strings\\Objects:MagicInk");
-					case 5L:
+					case 5:
 						return Game1.content.LoadString("Strings\\Objects:MagnifyingGlass");
-					case 3L:
+					case 3:
 						return Game1.content.LoadString("Strings\\Objects:SpecialCharm");
 					}
 				}
@@ -177,22 +177,22 @@ namespace StardewValley.Objects
 			{
 				switch (which)
 				{
-				case 4L:
+				case 4:
 					displayName = Game1.content.LoadString("Strings\\StringsFromCSFiles:SpecialItem.cs.13088");
 					break;
-				case 2L:
+				case 2:
 					displayName = Game1.content.LoadString("Strings\\StringsFromCSFiles:SpecialItem.cs.13089");
 					break;
-				case 6L:
+				case 6:
 					displayName = Game1.content.LoadString("Strings\\Objects:DarkTalisman");
 					break;
-				case 7L:
+				case 7:
 					displayName = Game1.content.LoadString("Strings\\Objects:MagicInk");
 					break;
-				case 5L:
+				case 5:
 					displayName = Game1.content.LoadString("Strings\\Objects:MagnifyingGlass");
 					break;
-				case 3L:
+				case 3:
 					displayName = Game1.content.LoadString("Strings\\Objects:SpecialCharm");
 					break;
 				}
@@ -234,20 +234,20 @@ namespace StardewValley.Objects
 		{
 			switch (which)
 			{
-			case 4L:
+			case 4:
 				who.hasSkullKey = true;
 				who.addQuest(19);
 				break;
-			case 6L:
+			case 6:
 				who.hasDarkTalisman = true;
 				break;
-			case 7L:
+			case 7:
 				who.hasMagicInk = true;
 				break;
-			case 5L:
+			case 5:
 				who.hasMagnifyingGlass = true;
 				break;
-			case 3L:
+			case 3:
 				who.hasSpecialCharm = true;
 				break;
 			}
@@ -273,17 +273,17 @@ namespace StardewValley.Objects
 		{
 			switch (which)
 			{
-			case 2L:
+			case 2:
 				return Game1.content.LoadString("Strings\\StringsFromCSFiles:SpecialItem.cs.13090", displayName);
-			case 4L:
+			case 4:
 				return Game1.content.LoadString("Strings\\StringsFromCSFiles:SpecialItem.cs.13092", displayName);
-			case 6L:
+			case 6:
 				return Game1.content.LoadString("Strings\\Objects:DarkTalismanDescription", displayName);
-			case 7L:
+			case 7:
 				return Game1.content.LoadString("Strings\\Objects:MagicInkDescription", displayName);
-			case 5L:
+			case 5:
 				return Game1.content.LoadString("Strings\\Objects:MagnifyingGlassDescription", displayName);
-			case 3L:
+			case 3:
 				return Game1.content.LoadString("Strings\\Objects:SpecialCharmDescription", displayName);
 			default:
 				if ((int)which == 99)

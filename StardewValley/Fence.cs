@@ -102,23 +102,23 @@ namespace StardewValley
 			health.Value = base_health + amount_adjustment;
 			switch (whichType)
 			{
-			case 1L:
+			case 1:
 				base.name = "Wood Fence";
 				base.ParentSheetIndex = -5;
 				break;
-			case 2L:
+			case 2:
 				base.name = "Stone Fence";
 				base.ParentSheetIndex = -6;
 				break;
-			case 3L:
+			case 3:
 				base.name = "Iron Fence";
 				base.ParentSheetIndex = -7;
 				break;
-			case 4L:
+			case 4:
 				base.name = "Gate";
 				base.ParentSheetIndex = -9;
 				break;
-			case 5L:
+			case 5:
 				base.name = "Hardwood Fence";
 				base.ParentSheetIndex = -8;
 				break;
@@ -129,13 +129,13 @@ namespace StardewValley
 
 		public virtual int GetBaseHealthForType(int fence_type)
 		{
-			return whichType switch
+			return whichType.Value switch
 			{
-				1L => 28, 
-				2L => 60, 
-				3L => 125, 
-				4L => 100, 
-				5L => 280, 
+				1 => 28, 
+				2 => 60, 
+				3 => 125, 
+				4 => 100, 
+				5 => 280, 
 				_ => 100, 
 			};
 		}
@@ -367,12 +367,12 @@ namespace StardewValley
 			{
 				return 325;
 			}
-			return whichType switch
+			return whichType.Value switch
 			{
-				1L => 322, 
-				5L => 298, 
-				2L => 323, 
-				3L => 324, 
+				1 => 322, 
+				5 => 298, 
+				2 => 323, 
+				3 => 324, 
 				_ => 322, 
 			};
 		}
@@ -410,10 +410,10 @@ namespace StardewValley
 				{
 					switch (whichType)
 					{
-					case 1L:
+					case 1:
 						location.debris.Add(new Debris(new Object(322, 1), tileLocation.Value * 64f + new Vector2(32f, 32f)));
 						break;
-					case 5L:
+					case 5:
 						location.debris.Add(new Debris(new Object(298, 1), tileLocation.Value * 64f + new Vector2(32f, 32f)));
 						break;
 					}
@@ -433,10 +433,10 @@ namespace StardewValley
 				{
 					switch (whichType)
 					{
-					case 2L:
+					case 2:
 						location.debris.Add(new Debris(new Object(323, 1), tileLocation.Value * 64f + new Vector2(32f, 32f)));
 						break;
-					case 3L:
+					case 3:
 						location.debris.Add(new Debris(new Object(324, 1), tileLocation.Value * 64f + new Vector2(32f, 32f)));
 						break;
 					}

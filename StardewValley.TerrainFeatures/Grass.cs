@@ -322,7 +322,7 @@ namespace StardewValley.TerrainFeatures
 				Color c = Color.Green;
 				switch (grassType)
 				{
-				case 1L:
+				case 1:
 					switch (location.GetSeasonForLocation())
 					{
 					case "spring":
@@ -336,16 +336,16 @@ namespace StardewValley.TerrainFeatures
 						break;
 					}
 					break;
-				case 2L:
+				case 2:
 					c = new Color(148, 146, 71);
 					break;
-				case 3L:
+				case 3:
 					c = new Color(216, 240, 255);
 					break;
-				case 4L:
+				case 4:
 					c = new Color(165, 93, 58);
 					break;
-				case 6L:
+				case 6:
 					c = Color.White * 0.6f;
 					break;
 				}

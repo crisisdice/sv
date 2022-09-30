@@ -92,7 +92,7 @@ namespace StardewValley.TerrainFeatures
 			int radialDebris = 12;
 			switch (parentSheetIndex)
 			{
-			case 600L:
+			case 600:
 				if (t is Axe && (int)t.upgradeLevel < 1)
 				{
 					location.playSound("axe");
@@ -106,7 +106,7 @@ namespace StardewValley.TerrainFeatures
 				}
 				location.playSound("axchop");
 				break;
-			case 602L:
+			case 602:
 				if (t is Axe && (int)t.upgradeLevel < 2)
 				{
 					location.playSound("axe");
@@ -120,7 +120,7 @@ namespace StardewValley.TerrainFeatures
 				}
 				location.playSound("axchop");
 				break;
-			case 622L:
+			case 622:
 				if (t is Pickaxe && (int)t.upgradeLevel < 3)
 				{
 					location.playSound("clubhit");
@@ -136,7 +136,7 @@ namespace StardewValley.TerrainFeatures
 				location.playSound("hammer");
 				radialDebris = 14;
 				break;
-			case 672L:
+			case 672:
 				if (t is Pickaxe && (int)t.upgradeLevel < 2)
 				{
 					location.playSound("clubhit");
@@ -152,10 +152,10 @@ namespace StardewValley.TerrainFeatures
 				location.playSound("hammer");
 				radialDebris = 14;
 				break;
-			case 752L:
-			case 754L:
-			case 756L:
-			case 758L:
+			case 752:
+			case 754:
+			case 756:
+			case 758:
 				if (!(t is Pickaxe))
 				{
 					return false;
@@ -196,8 +196,8 @@ namespace StardewValley.TerrainFeatures
 				}
 				switch (parentSheetIndex)
 				{
-				case 600L:
-				case 602L:
+				case 600:
+				case 602:
 				{
 					if (t.getLastFarmerToUse() == Game1.player)
 					{
@@ -248,11 +248,11 @@ namespace StardewValley.TerrainFeatures
 					}
 					return true;
 				}
-				case 672L:
-				case 752L:
-				case 754L:
-				case 756L:
-				case 758L:
+				case 672:
+				case 752:
+				case 754:
+				case 756:
+				case 758:
 				{
 					int numChunks = (((int)parentSheetIndex == 672) ? 15 : 10);
 					if (Game1.IsMultiplayer)
@@ -277,14 +277,14 @@ namespace StardewValley.TerrainFeatures
 					Color c = Color.White;
 					switch (parentSheetIndex)
 					{
-					case 752L:
+					case 752:
 						c = new Color(188, 119, 98);
 						break;
-					case 754L:
+					case 754:
 						c = new Color(168, 120, 95);
 						break;
-					case 756L:
-					case 758L:
+					case 756:
+					case 758:
 						c = new Color(67, 189, 238);
 						break;
 					}
@@ -294,7 +294,7 @@ namespace StardewValley.TerrainFeatures
 					});
 					return true;
 				}
-				case 622L:
+				case 622:
 				{
 					int numChunks = 6;
 					if (Game1.IsMultiplayer)
@@ -377,13 +377,13 @@ namespace StardewValley.TerrainFeatures
 			}
 			switch (parentSheetIndex)
 			{
-			case 602L:
+			case 602:
 				Game1.drawObjectDialogue(Game1.parseText(Game1.content.LoadString("Strings\\StringsFromCSFiles:ResourceClump.cs.13962")));
 				return true;
-			case 672L:
+			case 672:
 				Game1.drawObjectDialogue(Game1.parseText(Game1.content.LoadString("Strings\\StringsFromCSFiles:ResourceClump.cs.13963")));
 				return true;
-			case 622L:
+			case 622:
 				Game1.drawObjectDialogue(Game1.parseText(Game1.content.LoadString("Strings\\StringsFromCSFiles:ResourceClump.cs.13964")));
 				return true;
 			default:

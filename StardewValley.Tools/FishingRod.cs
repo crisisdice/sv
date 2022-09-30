@@ -194,12 +194,12 @@ namespace StardewValley.Tools
 
 		private bool usedGamePadToCast;
 
-		public override string DisplayName => upgradeLevel switch
+		public override string DisplayName => upgradeLevel.Value switch
 		{
-			0L => Game1.content.LoadString("Strings\\StringsFromCSFiles:FishingRod.cs.14045"), 
-			1L => Game1.content.LoadString("Strings\\StringsFromCSFiles:FishingRod.cs.14046"), 
-			2L => Game1.content.LoadString("Strings\\StringsFromCSFiles:FishingRod.cs.14047"), 
-			3L => Game1.content.LoadString("Strings\\StringsFromCSFiles:FishingRod.cs.14048"), 
+			0 => Game1.content.LoadString("Strings\\StringsFromCSFiles:FishingRod.cs.14045"), 
+			1 => Game1.content.LoadString("Strings\\StringsFromCSFiles:FishingRod.cs.14046"), 
+			2 => Game1.content.LoadString("Strings\\StringsFromCSFiles:FishingRod.cs.14047"), 
+			3 => Game1.content.LoadString("Strings\\StringsFromCSFiles:FishingRod.cs.14048"), 
 			_ => displayName, 
 		};
 
@@ -207,12 +207,12 @@ namespace StardewValley.Tools
 		{
 			get
 			{
-				return upgradeLevel switch
+				return upgradeLevel.Value switch
 				{
-					0L => "Bamboo Pole", 
-					1L => "Training Rod", 
-					2L => "Fiberglass Rod", 
-					3L => "Iridium Rod", 
+					0 => "Bamboo Pole", 
+					1 => "Training Rod", 
+					2 => "Fiberglass Rod", 
+					3 => "Iridium Rod", 
 					_ => base.BaseName, 
 				};
 			}
@@ -321,12 +321,12 @@ namespace StardewValley.Tools
 
 		public override int salePrice()
 		{
-			return upgradeLevel switch
+			return upgradeLevel.Value switch
 			{
-				0L => 500, 
-				1L => 2000, 
-				2L => 5000, 
-				3L => 15000, 
+				0 => 500, 
+				1 => 2000, 
+				2 => 5000, 
+				3 => 15000, 
 				_ => 500, 
 			};
 		}
@@ -613,12 +613,12 @@ namespace StardewValley.Tools
 
 		public Color getColor()
 		{
-			return upgradeLevel switch
+			return upgradeLevel.Value switch
 			{
-				0L => Color.Goldenrod, 
-				1L => Color.OliveDrab, 
-				2L => Color.White, 
-				3L => Color.Violet, 
+				0 => Color.Goldenrod, 
+				1 => Color.OliveDrab, 
+				2 => Color.White, 
+				3 => Color.Violet, 
 				_ => Color.White, 
 			};
 		}

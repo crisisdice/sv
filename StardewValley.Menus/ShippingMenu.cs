@@ -272,13 +272,13 @@ namespace StardewValley.Menus
 		{
 			switch (o.parentSheetIndex)
 			{
-			case 296L:
-			case 396L:
-			case 402L:
-			case 406L:
-			case 410L:
-			case 414L:
-			case 418L:
+			case 296:
+			case 396:
+			case 402:
+			case 406:
+			case 410:
+			case 414:
+			case 418:
 				return 1;
 			default:
 				switch (o.Category)

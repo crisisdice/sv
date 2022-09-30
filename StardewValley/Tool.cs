@@ -153,12 +153,12 @@ namespace StardewValley
 			get
 			{
 				displayName = loadDisplayName();
-				return upgradeLevel switch
+				return upgradeLevel.Value switch
 				{
-					1L => Game1.content.LoadString("Strings\\StringsFromCSFiles:Tool.cs.14299", displayName), 
-					2L => Game1.content.LoadString("Strings\\StringsFromCSFiles:Tool.cs.14300", displayName), 
-					3L => Game1.content.LoadString("Strings\\StringsFromCSFiles:Tool.cs.14301", displayName), 
-					4L => Game1.content.LoadString("Strings\\StringsFromCSFiles:Tool.cs.14302", displayName), 
+					1 => Game1.content.LoadString("Strings\\StringsFromCSFiles:Tool.cs.14299", displayName), 
+					2 => Game1.content.LoadString("Strings\\StringsFromCSFiles:Tool.cs.14300", displayName), 
+					3 => Game1.content.LoadString("Strings\\StringsFromCSFiles:Tool.cs.14301", displayName), 
+					4 => Game1.content.LoadString("Strings\\StringsFromCSFiles:Tool.cs.14302", displayName), 
 					_ => displayName, 
 				};
 			}
@@ -172,12 +172,12 @@ namespace StardewValley
 		{
 			get
 			{
-				return upgradeLevel switch
+				return upgradeLevel.Value switch
 				{
-					1L => "Copper " + BaseName, 
-					2L => "Steel " + BaseName, 
-					3L => "Gold " + BaseName, 
-					4L => "Iridium " + BaseName, 
+					1 => "Copper " + BaseName, 
+					2 => "Steel " + BaseName, 
+					3 => "Gold " + BaseName, 
+					4 => "Iridium " + BaseName, 
 					_ => BaseName, 
 				};
 			}

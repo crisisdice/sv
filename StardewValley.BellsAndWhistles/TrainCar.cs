@@ -112,19 +112,19 @@ namespace StardewValley.BellsAndWhistles
 					int debrisType = -1;
 					switch (resourceType)
 					{
-					case 0L:
+					case 0:
 						debrisType = 382;
 						break;
-					case 1L:
+					case 1:
 						debrisType = ((color.R > color.G) ? 378 : ((color.G > color.B) ? 380 : ((color.B > color.R) ? 384 : 378)));
 						break;
-					case 7L:
+					case 7:
 						debrisType = (Game1.currentSeason.Equals("winter") ? 536 : ((Game1.stats.DaysPlayed > 120 && color.R > color.G) ? 537 : 535));
 						break;
-					case 2L:
+					case 2:
 						debrisType = 388;
 						break;
-					case 6L:
+					case 6:
 						debrisType = 390;
 						break;
 					}

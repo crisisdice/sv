@@ -100,18 +100,18 @@ namespace StardewValley.Buildings
 					Item toAdd = null;
 					switch (input.Value.items[i].parentSheetIndex)
 					{
-					case 271L:
+					case 271:
 						toAdd = new Object(423, input.Value.items[i].Stack);
 						break;
-					case 245L:
-					case 246L:
-					case 423L:
+					case 245:
+					case 246:
+					case 423:
 						toAdd = input.Value.items[i];
 						break;
-					case 262L:
+					case 262:
 						toAdd = new Object(246, input.Value.items[i].Stack);
 						break;
-					case 284L:
+					case 284:
 						toAdd = new Object(245, 3 * input.Value.items[i].Stack);
 						break;
 					}

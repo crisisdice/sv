@@ -10012,13 +10012,13 @@ namespace StardewValley
 		{
 			switch (Game1.player.houseUpgradeLevel)
 			{
-			case 0L:
+			case 0:
 				createQuestionDialogue(Game1.parseText(Game1.content.LoadString("Strings\\Locations:ScienceHouse_Carpenter_UpgradeHouse1")), createYesNoResponses(), "upgrade");
 				break;
-			case 1L:
+			case 1:
 				createQuestionDialogue(Game1.parseText(Game1.content.LoadString("Strings\\Locations:ScienceHouse_Carpenter_UpgradeHouse2")), createYesNoResponses(), "upgrade");
 				break;
-			case 2L:
+			case 2:
 				createQuestionDialogue(Game1.parseText(Game1.content.LoadString("Strings\\Locations:ScienceHouse_Carpenter_UpgradeHouse3")), createYesNoResponses(), "upgrade");
 				break;
 			}
@@ -10093,7 +10093,7 @@ namespace StardewValley
 		{
 			switch (Game1.player.houseUpgradeLevel)
 			{
-			case 0L:
+			case 0:
 				if (Game1.player.Money >= 10000 && Game1.player.hasItemInInventory(388, 450))
 				{
 					Game1.player.daysUntilHouseUpgrade.Value = 3;
@@ -10112,7 +10112,7 @@ namespace StardewValley
 					Game1.drawObjectDialogue(Game1.content.LoadString("Strings\\Locations:ScienceHouse_Carpenter_NotEnoughWood1"));
 				}
 				break;
-			case 1L:
+			case 1:
 				if (Game1.player.Money >= 50000 && Game1.player.hasItemInInventory(709, 150))
 				{
 					Game1.player.daysUntilHouseUpgrade.Value = 3;
@@ -10131,7 +10131,7 @@ namespace StardewValley
 					Game1.drawObjectDialogue(Game1.content.LoadString("Strings\\Locations:ScienceHouse_Carpenter_NotEnoughWood2"));
 				}
 				break;
-			case 2L:
+			case 2:
 				if (Game1.player.Money >= 100000)
 				{
 					Game1.player.daysUntilHouseUpgrade.Value = 3;

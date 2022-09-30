@@ -138,55 +138,55 @@ namespace StardewValley.Menus
 				IslandFieldOffice office = (IslandFieldOffice)Game1.getLocationFromName("IslandFieldOffice");
 				switch (i.parentSheetIndex)
 				{
-				case 820L:
+				case 820:
 					if (!office.piecesDonated[5])
 					{
 						return true;
 					}
 					break;
-				case 821L:
+				case 821:
 					if (!office.piecesDonated[4])
 					{
 						return true;
 					}
 					break;
-				case 822L:
+				case 822:
 					if (!office.piecesDonated[3])
 					{
 						return true;
 					}
 					break;
-				case 823L:
+				case 823:
 					if (!office.piecesDonated[0] || !office.piecesDonated[2])
 					{
 						return true;
 					}
 					break;
-				case 824L:
+				case 824:
 					if (!office.piecesDonated[1])
 					{
 						return true;
 					}
 					break;
-				case 825L:
+				case 825:
 					if (!office.piecesDonated[8])
 					{
 						return true;
 					}
 					break;
-				case 826L:
+				case 826:
 					if (!office.piecesDonated[7] || !office.piecesDonated[6])
 					{
 						return true;
 					}
 					break;
-				case 827L:
+				case 827:
 					if (!office.piecesDonated[9])
 					{
 						return true;
 					}
 					break;
-				case 828L:
+				case 828:
 					if (!office.piecesDonated[10])
 					{
 						return true;
@@ -405,21 +405,21 @@ namespace StardewValley.Menus
 			Rectangle source = default(Rectangle);
 			switch (heldItem.parentSheetIndex)
 			{
-			case 820L:
-			case 821L:
-			case 822L:
-			case 823L:
-			case 824L:
+			case 820:
+			case 821:
+			case 822:
+			case 823:
+			case 824:
 				source = new Rectangle(119, 86, 18, 18);
 				break;
-			case 825L:
-			case 826L:
+			case 825:
+			case 826:
 				source = new Rectangle(138, 86, 18, 18);
 				break;
-			case 827L:
+			case 827:
 				source = new Rectangle(157, 86, 18, 18);
 				break;
-			case 828L:
+			case 828:
 				source = new Rectangle(176, 86, 18, 18);
 				break;
 			}
