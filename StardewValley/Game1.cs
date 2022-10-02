@@ -2211,10 +2211,10 @@ namespace StardewValley
 
 		public static string GetSaveGameName(bool set_value = true)
 		{
-			if (!_setSaveName && set_value)
+			if (set_value)
 			{
 				string base_name = MasterPlayer.farmName.Value;
-				string save_name = base_name;
+				string save_name = base_name + "_" + DateTime.Now.ToString("yyyyMMddHHMMss");
 				int collision_index = 2;
 				while (SaveGame.IsNewGameSaveNameCollision(save_name))
 				{
