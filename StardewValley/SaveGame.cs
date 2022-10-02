@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Xml;
@@ -496,6 +497,7 @@ namespace StardewValley
 			string filenameNoTmpString = friendlyName + "_" + Game1.uniqueIDForThisGame;
 			string filenameWithTmpString = friendlyName + "_" + Game1.uniqueIDForThisGame + tmpString;
 			string save_directory = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "StardewValley", "Saves", filenameNoTmpString + Path.DirectorySeparatorChar);
+			tooManySaves();
 			if (Game1.savePathOverride != "")
 			{
 				save_directory = Game1.savePathOverride;
@@ -635,6 +637,53 @@ namespace StardewValley
 				throw new TaskCanceledException();
 			}
 			yield return 100;
+		}
+
+		public static DateTime pathSafeDateToISO(string ts)
+		{
+			var sb = new StringBuilder(19);
+			for (var i = 0; i < 14; i++)
+			{
+				sb.Append(ts[i]);
+				// is delimiter index
+				if (i > 2 && (i + 1) % 2 == 0 && i < 13)
+				{
+					var delimiter = i < 8
+					  ? (
+						  i == 7 ? 'T' : '-'
+						)
+					  : ':';
+					sb.Append(delimiter);
+				}
+			}
+			return DateTime.Parse(sb.ToString());
+		}
+
+		public static DateTime getSaveDateTime(DirectoryInfo save)
+		{
+			var firstHalf = save.Name.Split("_")[0];
+			var ts = firstHalf.Substring(firstHalf.Length - 14);
+			try
+			{
+				return pathSafeDateToISO(ts);
+			}
+			catch (FormatException)
+			{
+				return new DateTime(0);
+			}
+		}
+
+		public static void tooManySaves()
+		{
+			const int MAX_SAVES = 5;
+			var saves_dir = new DirectoryInfo(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "StardewValley", "Saves"));
+			var savesForThisGame = saves_dir.EnumerateDirectories().Where(dir => dir.Name.Split("_")?[1] == Game1.uniqueIDForThisGame.ToString()).ToList();
+
+			if (savesForThisGame.Count >= MAX_SAVES)
+			{
+				var oldest = savesForThisGame.OrderBy(save => getSaveDateTime(save)).ToList()[0];
+				Directory.Delete(oldest.FullName, true);
+			}
 		}
 
 		public static bool IsNewGameSaveNameCollision(string save_name)
