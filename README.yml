@@ -2,6 +2,18 @@
 
 - .NET core 5.0 sdk
 - Copy `<programs>\Steam\STEAM\steamapps\common\Stardew Valley\*` to `<project-root>\lib\`
+    BmFont.dll
+    FAudio-CS.dll
+    FAudio.dll
+    GalaxyCSharp.dll
+    Lidgren.Network.dll
+    MonoGame.Framework.dll
+    SDL2.dll
+    SkiaSharp.dll
+    StardewValley.GameData.dll
+    Steamworks.NET.dll
+    TextCopy.dll
+    xTile.dll
 - XNA:
     https://flatredball.com/visual-studio-2019-xna-setup/
     https://www.youtube.com/watch?v=Jbld5ZrW3ls
