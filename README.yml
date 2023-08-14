@@ -1,0 +1,7 @@
+# sv
+
+- .NET core 5.0 sdk
+- Copy `<programs>\Steam\STEAM\steamapps\common\Stardew Valley\*` to `<project-root>\lib\`
+- XNA:
+    https://flatredball.com/visual-studio-2019-xna-setup/
+    https://www.youtube.com/watch?v=Jbld5ZrW3ls
