@@ -12079,6 +12079,10 @@ namespace StardewValley
 				player.UpdateItemStow();
 			}
 			int whichWay = ((input.GetMouseState().ScrollWheelValue > oldMouseState.ScrollWheelValue) ? (-1) : ((input.GetMouseState().ScrollWheelValue < oldMouseState.ScrollWheelValue) ? 1 : 0));
+			if (oldKBState.GetPressedKeys().Contains(Keys.Tab))
+			{
+				whichWay = oldKBState.IsKeyDown(Keys.LeftShift) ? -1 : 1;
+			}
 			if (options.gamepadControls && whichWay == 0)
 			{
 				if (input.GetGamePadState().IsButtonDown(Buttons.LeftTrigger))
@@ -16184,6 +16188,7 @@ namespace StardewValley
 				else if (getMouseX() != getOldMouseX() || getMouseY() != getOldMouseY())
 				{
 					lastCursorMotionWasMouse = true;
+					timerUntilMouseFade = 500;
 				}
 				bool actionButtonPressed = false;
 				bool switchToolButtonPressed = false;
@@ -16217,7 +16222,7 @@ namespace StardewValley
 				{
 					useToolButtonReleased = true;
 				}
-				if (currentMouseState.ScrollWheelValue != oldMouseState.ScrollWheelValue)
+				if (currentMouseState.ScrollWheelValue != oldMouseState.ScrollWheelValue || (oldKBState.GetPressedKeys().Contains(Keys.Tab) && !currentKBState.GetPressedKeys().Contains(Keys.Tab)))
 				{
 					switchToolButtonPressed = true;
 				}
@@ -18170,7 +18175,7 @@ namespace StardewValley
 			spriteBatch.Draw(mouseCursors, new Microsoft.Xna.Framework.Rectangle((int)topOfBar.X, (int)(topOfBar.Y + 64f), 48, graphics.GraphicsDevice.Viewport.GetTitleSafeArea().Bottom - 64 - 16 - (int)(topOfBar.Y + 64f - 8f)), new Microsoft.Xna.Framework.Rectangle(256, 424, 12, 16), Color.White);
 			spriteBatch.Draw(mouseCursors, new Vector2(topOfBar.X, topOfBar.Y + 224f + (float)(int)((float)(player.MaxStamina - 270) * modifier) - 64f), new Microsoft.Xna.Framework.Rectangle(256, 448, 12, 16), Color.White, 0f, Vector2.Zero, 4f, SpriteEffects.None, 1f);
 			Microsoft.Xna.Framework.Rectangle r = new Microsoft.Xna.Framework.Rectangle((int)topOfBar.X + 12, (int)topOfBar.Y + 16 + 32 + (int)((float)(player.MaxStamina - (int)Math.Max(0f, player.Stamina)) * modifier), 24, (int)(player.Stamina * modifier));
-			if ((float)getOldMouseX() >= topOfBar.X && (float)getOldMouseY() >= topOfBar.Y)
+			if (options.showStamina || ((float)getOldMouseX() >= topOfBar.X && (float)getOldMouseY() >= topOfBar.Y))
 			{
 				drawWithBorder((int)Math.Max(0f, player.Stamina) + "/" + player.MaxStamina, Color.Black * 0f, Color.White, topOfBar + new Vector2(0f - dialogueFont.MeasureString("999/999").X - 16f - (float)(showingHealth ? 64 : 0), 64f));
 			}
@@ -18353,7 +18358,7 @@ namespace StardewValley
 				timerUntilMouseFade -= currentGameTime.ElapsedGameTime.Milliseconds;
 				lastMousePositionBeforeFade = getMousePosition();
 			}
-			if (options.gamepadControls && timerUntilMouseFade <= 0 && activeClickableMenu == null && (emoteMenu == null || emoteMenu.gamepadMode))
+			if (timerUntilMouseFade <= 0 && activeClickableMenu == null && (emoteMenu == null || emoteMenu.gamepadMode))
 			{
 				mouseCursorTransparency = 0f;
 			}

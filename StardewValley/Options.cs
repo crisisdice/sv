@@ -122,6 +122,8 @@ namespace StardewValley
 
 		public const int toggleMuteAnimalSounds = 43;
 
+		public const int showStaminaToggle = 44;
+
 		public const int input_actionButton = 7;
 
 		public const int input_cancelButton = 9;
@@ -237,6 +239,8 @@ namespace StardewValley
 		public bool fullscreen;
 
 		public bool windowedBorderlessFullscreen;
+
+		public bool showStamina;
 
 		[DontLoadDefaultSetting]
 		public bool ipConnectionsEnabled;
@@ -705,6 +709,7 @@ namespace StardewValley
 			enableFarmhandCreation = true;
 			showMPEndOfNightReadyStatus = false;
 			muteAnimalSounds = false;
+			showStamina = false;
 		}
 
 		public void setControlsToDefault()
@@ -931,6 +936,9 @@ namespace StardewValley
 				break;
 			case 43:
 				muteAnimalSounds = value;
+				break;
+			case 44:
+				showStamina = value;
 				break;
 			}
 			optionsDirty = true;
@@ -1443,6 +1451,9 @@ namespace StardewValley
 			case 40:
 			case 41:
 			case 42:
+				break;
+			case 44:
+				checkbox.isChecked = showStamina;
 				break;
 			}
 		}

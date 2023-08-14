@@ -915,6 +915,7 @@ namespace StardewValley.Menus
 			{
 				ClickableComponent last_snapped_component = currentlySnappedComponent;
 				organizeItemsInList(ItemsToGrabMenu.actualInventory);
+				organizeItemsInList(Game1.player.items);
 				Item held_item = heldItem;
 				heldItem = null;
 				Game1.activeClickableMenu = new ItemGrabMenu(ItemsToGrabMenu.actualInventory, reverseGrab: false, showReceivingMenu: true, InventoryMenu.highlightAllItems, behaviorFunction, null, behaviorOnItemGrab, snapToBottom: false, canBeExitedWithKey: true, playRightClickSound: true, allowRightClick: true, showOrganizeButton: true, source, sourceItem, whichSpecialButton, context).setEssential(essential);
@@ -1184,6 +1185,12 @@ namespace StardewValley.Menus
 			{
 				Utility.trashItem(heldItem);
 				heldItem = null;
+			}
+			if (key == Keys.O)
+			{
+				organizeItemsInList(ItemsToGrabMenu.actualInventory);
+				organizeItemsInList(Game1.player.items);
+				Game1.playSound("Ship");
 			}
 		}
 

@@ -324,6 +324,14 @@ namespace StardewValley.Menus
 							}
 						}
 					}
+					if (key == Keys.S)
+					{
+						selectedResponse = selectedResponse < 0 ? 0 : ((selectedResponse + 1) % responses.Count);
+					}
+					if (key == Keys.W)
+					{
+						selectedResponse = selectedResponse < 0 ? 0 : ((selectedResponse + responses.Count - 1) % responses.Count);
+					}
 				}
 				if (Game1.options.doesInputListContain(Game1.options.menuButton, key) || key == Keys.N)
 				{
